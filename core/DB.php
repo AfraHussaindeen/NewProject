@@ -44,46 +44,103 @@
        return $this;
    }
 
+   protected function _read($table ,$params=[]){
+    $conditionString ="";
+    $bind=[];
+    $order = "";
+    $limit ="";
+
+    //conditions 
+    if(isset($params['conditions'])){
+      if(is_array($params['conditions'])){
+        foreach($params['conditions'] as $condition){
+          $conditionString .= ' '.$condition .' AND';
+        }
+        $conditionString=trim($conditionString);
+        $conditionString= rtrim ($conditionString,' AND');
+       
+      }else{
+        $conditionString=$params['conditions'];
+      }if($conditionString!=""){
+      $conditionString=' Where '. $conditionString; 
+      }Creating classes
+    }
+
+    //bind
+    if(array_key_exists('bind',$params)){
+      $bind = $params['bind'];
+    }
+
+    //order
+    if(array_key_exists('order',$params)){
+        $order = ' ORDER BY '. $params['order'];
+    }
+
+    //limit 
+    if(array_key_exists('limit',$params)){
+      $limit = ' LIMIT ' . $params['limit'];
+    }
+    $sql = "SELECT * FROM {$table}{$conditionString}{$order}{$limit}";
+    if($this->query($sql,$bind)){
+      if (! count($this->_result)) return false ;
+         return true;
+
+      }
+  }
+
+
+
+   public function find($table , $params=[]){
+    if($this->_read($table,$params)){
+      return $this->results();
+    }
+    return false;
+  }
+
+  public function findFirst($table , $params=[]){
+      if($this->_read($table,$params)){
+         return $this->first();
+      }
+      return false ;
+  }
 
    public function insert($table, $fields =[]){
-     $fieldString = '';
-     $valueString = '';
-     $values =[] ;
+    $fieldString = '';
+    $valueString = '';
+    $values =[] ;
 
-     foreach($fields as $field =>$value){
-       $fieldString .= '`' . $field . '`,';
-       $valueString .= '?,';
+    foreach($fields as $field =>$value){
+      $fieldString .= '`' . $field . '`,';
+      $valueString .= '?,';
+      $values[] =$value;
+    }
+    $fieldString = rtrim($fieldString , ',');
+    $valueString = rtrim($valueString , ',');
+   
+
+    $sql = "INSERT INTO {$table} ({$fieldString}) VALUES ({$valueString}) ";
+    if (!$this->query($sql , $values)->error()){
+      return true;
+    }
+    return false;
+  }
+
+  public function update($table,$id,$fields){
+    $fieldString = '';
+    $values = [];
+  
+    foreach($fields as $field => $value){
+       $fieldString .= ' '.$field . ' = ?,';
        $values[] =$value;
-     }
-     $fieldString = rtrim($fieldString , ',');
-     $valueString = rtrim($valueString , ',');
-    
-
-     $sql = "INSERT INTO {$table} ({$fieldString}) VALUES ({$valueString}) ";
-     if (!$this->query($sql , $values)->error()){
-       return true;
-     }
-     return false;
-   }
-
-
-public function update($table,$id,$fields){
-  $fieldString = '';
-  $values = [];
-
-  foreach($fields as $field => $value){
-     $fieldString .= ' '.$field . ' = ?,';
-     $values[] =$value;
+    }
+    $fieldString = trim ($fieldString);
+    $fieldString = rtrim($fieldString,',');
+    $sql = "UPDATE {$table} SET {$fieldString} WHERE id={$id} ";
+    if (!$this->query($sql , $values)->error()){
+      return true;
+    }
+    return false;
   }
-  $fieldString = trim ($fieldString);
-  $fieldString = rtrim($fieldString,',');
-  $sql = "UPDATE {$table} SET {$fieldString} WHERE id={$id} ";
-  if (!$this->query($sql , $values)->error()){
-    return true;
-  }
-  return false;
-}
-
 
   public function delete($table , $id){
     $sql = "DELETE FROM {$table} WHERE id ={$id}";
@@ -97,14 +154,36 @@ public function update($table,$id,$fields){
     return $this->_result;
   }
 
-  // A function to return only the object related to the data in the first row in the database
-  //Here the returned obj is not inside the array.Thus you can access the attributes directly
   public function first(){
     return (!empty($this->_result))? $this->_result[0] : [];
   }
+
+  public function count (){
+    return $this->_count;
+  }
+
+  public function lastID(){
+    return $this->_lastInsertID;
+  }
+
+  public function get_columns($table){
+    return $this->query("SHOW COLUMNS FROM {$table}")->results();
+  }
+
   public function error(){
-     return $this->_error;
-   }
+    return $this->_error;
+  }
+
+
  }
 //self::   refers to the parent classs ldap_get_attribute
 //$this->   refers to the class of the current object.
+
+//first()................. A function to return only the object related to the data in the first row in the database
+  //Here the returned obj is not inside the array.Thus you can access the attributes directly
+
+
+
+
+
+
