@@ -1,7 +1,7 @@
 <?php
 
 class Model{
-    protected $_db ,$_table,$_modelName ,$_softDelete = false , $columnNames =[];
+    protected $_db ,$_table,$_modelName ,$_softDelete = false , $_columnNames =[];
     public $id;
 
     public function __construct($table){
@@ -14,6 +14,7 @@ class Model{
     protected function _setTableColumns(){
         $columns = $this->get_columns();
         foreach($columns as $column){
+            $columnName = $column->Field;
             $this->_columnNames[] = $column->Field;
             $this->{$columnName} = null;
         }
@@ -37,13 +38,15 @@ class Model{
     public function findFirst($params = []){
         $resultQuery = $this->_db->findFirst($this->_table , $params);
         $result = new $this->_modelName($this->_table);
-        $result->populateObjData($resultQuery);
+        if ($resultQuery){
+            $result->populateObjData($resultQuery);
+        }
         return $result;
     }
 
     protected function populateObjData($result){
         foreach($result as $key => $val){
-            $this->$key =$val;
+            $this->$key = $val;
         }
     }
 
@@ -54,7 +57,7 @@ class Model{
 
     public function insert($fields){
         if (empty($fields)) return false ;
-        return $this->_db->insert($this->-table , $fields)
+        return $this->_db->insert($this->_table , $fields);
     }
 
     public function update($id , $fields){
@@ -88,9 +91,9 @@ class Model{
         }
     }
 
-    public dunction data(){
+    public function data(){
         $data = new stdClass();
-        foreach($this->columnNames as $column){
+        foreach($this->_columnNames as $column){
             $data->column = $this->column;
         }
         return $data;

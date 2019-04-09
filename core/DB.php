@@ -63,7 +63,7 @@
         $conditionString=$params['conditions'];
       }if($conditionString!=""){
       $conditionString=' Where '. $conditionString; 
-      }Creating classes
+      }
     }
 
     //bind
