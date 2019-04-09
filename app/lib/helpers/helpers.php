@@ -11,6 +11,6 @@ function sanitize($dirty){
   return htmlentities($dirty,ENT_QUOTES ,'UTF-8');
 }
 
-function currenttUser(){
-  return Users::currentLoggedInUser():
+function currentUser(){
+  return Users::currentLoggedInUser();
 }

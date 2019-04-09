@@ -28,7 +28,7 @@ class Users extends Model{
         return $this->findFirst(['conditions' => 'username=?','bind'=>[$username]]);
     }
 
-    public static currentLoggedInUser(){
+    public static function currentLoggedInUser(){
         if(!isset(self::$currentLoggedInUser) && Session::exists(CURRENT_USER_SESSION_NAME)){
             $u = new Users((int)Session::get(CURRENT_USER_SESSION_NAME));
             self::$currentLoggedInUser =$u;
