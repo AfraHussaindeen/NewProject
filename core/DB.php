@@ -10,6 +10,9 @@
    private function __construct(){
       try{
         $this->_pdo =new  PDO("mysql:host=127.0.0.1;dbname=newproject", 'root', '');
+        $this->_pdo->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
+        $this->_pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES , false);
+        //if the query fails the above instructions will display it . 
       }catch(PDOException $e){
         die($e->getMessage());
       }
