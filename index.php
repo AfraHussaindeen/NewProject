@@ -43,6 +43,9 @@ session_start();
 $url =isset($_SERVER["PATH_INFO"]) ? explode ('/',ltrim($_SERVER['PATH_INFO'],'/')) : [];
 //var_dump($name) => print the elements of the array
 
+if(!Session::exists(CURRENT_USER_SESSION_NAME) && COOKIE::exists(REMEMBER_ME_COOKIE_NAME)){
+  Users::loginUserFromCookie();
+}
 //Route the Request.
 //Router is the class
 // route() is a defined method in the Router class .

@@ -33,7 +33,7 @@
                }
            }
 
-          if($this->_query->execute()){
+          if($this->_query->execute()){ 
               $this->_result = $this->_query->fetchAll(PDO::FETCH_OBJ);
               $this->_count = $this->_query->rowCount();
               $this->_lastInsertId = $this->_pdo->lastInsertId();
@@ -182,8 +182,9 @@
 //first()................. A function to return only the object related to the data in the first row in the database
   //Here the returned obj is not inside the array.Thus you can access the attributes directly
 
-
-
+//$query->execute() .............check whether the  query has executed or not? true:false
+//prepare() ............Prepare an SQL query with empty values as placeholders (with a question mark for each value). 
+//Bind variables to the placeholders by stating each variable, along with its type. Execute query.
 
 
 

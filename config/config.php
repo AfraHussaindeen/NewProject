@@ -9,4 +9,4 @@ define ('PROOT','/NewProject/');// set this to '/' for a live server'
 
 define('CURRENT_USER_SESSION_NAME','kwXCMFYjdsndmcjNGDmXhDCnhHc');//session name for a logged in user
 define('REMEMBER_ME_COOKIE_NAME','HdBnNHnBNgnjBNHgbhhjbVBHGBJHnbb');//cookie name for a loggedd in user remember me
-define('REMEMBER_ME_COOKIE_EXPIRY', 604800);// time in seconds for remember me cookie to live(30 days)
+define('REMEMBER_ME_COOKIE_EXPIRY', 2592000);// time in seconds for remember me cookie to live(30 days)
