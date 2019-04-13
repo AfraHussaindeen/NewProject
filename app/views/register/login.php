@@ -8,8 +8,8 @@
         <div class="bg-danger"><?=$this->displayErrors ?></div>
         <h3 class="text-center">Log In</h3>
         <div class="form-group">  
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="form-control">
+            <label for="nicNumber">NIC Number</label>
+            <input type="text" name="nicNumber" id="nicNumber" class="form-control">
         </div>
         <div class="form-group">
             <label for="password">Password</label>

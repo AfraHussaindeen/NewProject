@@ -14,7 +14,7 @@ class Users extends Model{
             if (is_int($user)){
                 $u = $this->_db->findFirst('users',['conditions' => 'id = ?' , 'bind'=>[$user]]);
             }else{
-                $u = $this->_db->findFirst('users',['conditions' => 'username = ? ' , 'bind'=>[$user]]);
+                $u = $this->_db->findFirst('users',['conditions' => 'nicNumber = ? ' , 'bind'=>[$user]]);
             }
             if ($u){
                 foreach($u as $key => $val){
@@ -24,8 +24,8 @@ class Users extends Model{
         }
     }
 
-    public function findByUsername($username){
-        return $this->findFirst(['conditions' => 'username=?','bind'=>[$username]]);
+    public function findByNICnumber($nicNumber){
+        return $this->findFirst(['conditions' => 'nicNumber=?','bind'=>[$nicNumber]]);
     }
 
     public static function currentLoggedInUser(){

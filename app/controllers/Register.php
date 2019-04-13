@@ -13,8 +13,8 @@ class Register extends Controller{
         if($_POST){
             //form validation
             $validation->check($_POST,[
-                'username' => [
-                    'display'=>"Username",
+                'nicNumber' => [
+                    'display'=>"NIC Number",
                     'required' => true
                 ],
                 'password' => [
@@ -25,14 +25,14 @@ class Register extends Controller{
             ]);
             
             if ($validation->passed()){
-                $user = $this->UsersModel->findByUsername($_POST['username']);
+                $user = $this->UsersModel->findByNICnumber($_POST['nicNumber']);
                
                 if($user && password_verify(Input::get('password'),$user->password)){
                     $remember = (isset ($_POST['remember_me']) && Input::get('remember_me'))? true :false;
                     $user->login($remember);
                     Router::redirect('');
                 }else{
-                    $validation->addError("There is an error with your username or password.");
+                    $validation->addError("There is an error with your NIC number or password.");
                 }
             }
         }
@@ -51,7 +51,7 @@ class Register extends Controller{
 
     public function registerAction(){
         $validation = new Validate();
-        $posted_values =['fname'=>'', 'lname'=>'', 'username'=>'' , 'email'=>'' , 'password'=>'', 'confirm'=>''];
+        $posted_values =['fname'=>'', 'nameInitial'=>'', 'nicNumber'=>'' , 'email'=>'' , 'password'=>'', 'confirm'=>'','regNumber'=>'','contact'=>'' ];
         if($_POST){
             $posted_values = posted_values($_POST);
             $validation->check($_POST ,[
@@ -59,16 +59,16 @@ class Register extends Controller{
                     'display'=>'First Name',
                     'required'=> true
                 ],
-                'lname'=>[
-                    'display'=>'Last Name',
+                'nameInitial'=>[
+                    'display'=>'Name with Initials',
                     'required'=> true
                 ],
-                'username'=>[
-                    'display'=>'Username',
+                'nicNumber'=>[
+                    'display'=>'NIC number',
                     'required'=> true,
                     'unique' => 'users',
-                    'min' => 6,
-                    'max'=> 150
+                    'min' => 10,
+                    'max'=> 25
                 ],
                 'email'=>[
                     'display'=>'Email',
@@ -86,6 +86,16 @@ class Register extends Controller{
                     'display'=>'Confirm Password',
                     'required'=> true,
                     'matches'=>'password'
+                ],
+                'regNumber'=>[
+                    'display'=>'Register Number',
+                    'required'=> true,
+                    'unique' =>'users',
+                ],
+                'contact'=>[
+                    'display'=>'Contact Number',
+                    'required'=> true,
+                    'unique' =>'users',
                 ]
             ]);
 
