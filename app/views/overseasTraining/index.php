@@ -8,7 +8,7 @@
 <div class='col-md-6 col-md-offset-3 well'>
     <form class="form" action="" method='post'>
         <h3 class='text-center'>Overseas Training Application</h3><hr>
-        <div class="bg-danger"><?= $this->displayErrors?></div>  
+        <div class="bg-danger"><?= $this->displayErrors?></div>
         <div class="form-group">
             <label for="nameInitial">Name with initials</label>
             <input type='text' id='nameInitial' name='nameInitial' class='form-control' value='<?=currentUser()->nameInitial;?>' readonly="readonly">
@@ -35,15 +35,16 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="departure">Date Of Departure</label>
-            <input type='date' id='departure' name='departure' class='form-control' value='<?=$this->post['departure']?>'>
-        </div>
-        <div class="form-group">
             <label for="arrival">Date Of Arrival</label>
             <input type='date' id='arrival' name='arrival' class='form-control' value='<?=$this->post['arrival']?>'>
         </div>   
+        <div class="form-group">
+            <label for="departure">Date Of Departure</label>
+            <input type='date' id='departure' name='departure' class='form-control' value='<?=$this->post['departure']?>' >
+        </div>
+        
         <div class='pull-right'>
-            <input type='submit' class='btn btn-primary btn-large' value='Register'>
+            <input type='submit' class='btn btn-primary btn-large' value='Submit'>
         </div>
         
     </form>

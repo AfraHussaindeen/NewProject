@@ -63,6 +63,14 @@ class Validate{
                                     $this->addError(["{$display} must be a valid email address." , $item]);
                                 }
                                 break;
+                            
+                            case 'is_date_greater' :
+                                if($value < $source[$rule_value]){
+                                    $this->addError(["{$display} must be a date greater than Date of {$rule_value}." , $item]);
+                                }
+                                break;
+                            
+                            
                     }
                 }
             }
