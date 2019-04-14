@@ -5,7 +5,8 @@
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
         "Register" : ["login" , "register"],
-        "Restricted" : ["*"]
+        "Restricted" : ["*"],
+        "Notice" : ["*"]
         
     } ,
 
@@ -17,7 +18,8 @@
         "Tools" : ["*"],
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
-        "OverseasTraining" :["*"]
+        "OverseasTraining" :["*"],
+        "Notice" : ["*"]
 
     }
 
