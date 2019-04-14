@@ -11,27 +11,27 @@
         <div class="bg-danger"><?= $this->displayErrors?></div>  
         <div class="form-group">
             <label for="nameInitial">Name with initials</label>
-            <input type='text' id='nameInitial' name='nameInitial' class='form-control' value='<?=currentUser()->nameInitial;?>'>
+            <input type='text' id='nameInitial' name='nameInitial' class='form-control' value='<?=currentUser()->nameInitial;?>' readonly="readonly">
         </div>    
         <div class="form-group">
             <label for="regNumber">Register Number</label>
-            <input type='text' id='regNumber' name='regNumber' class='form-control' value='<?=currentUser()->regNumber;?>'>
+            <input type='text' id='regNumber' name='regNumber' class='form-control' value='<?=currentUser()->regNumber;?>' readonly="readonly">
         </div>    
         <div class="form-group">
             <label for="email">Email</label>
-            <input type='text' id='email' name='email' class='form-control' value='<?=currentUser()->email;?>'>
+            <input type='text' id='email' name='email' class='form-control' value='<?=currentUser()->email;?>' readonly="readonly">
         </div>    
         <div class="form-group">
             <label for="contact">Contact Number</label>
-            <input type='text' id='contact' name='contact' class='form-control' value='<?=currentUser()->contact;?>'>
+            <input type='text' id='contact' name='contact' class='form-control' value='<?=currentUser()->contact;?>' readonly="readonly">
         </div>    
         <div class="form-group">
             <label for="field">Field</label>
             <select id='field' name='field' class='form-control'>
-                <option value='option1'>Option 1</option>
-                <option value='option2'>Option 2</option>
-                <option value='option3'>Option 3</option>
-                <option value='option4'>Option 4</option>
+                <option value='Anesthesiologist'>Anesthesiologist</option>
+                <option value='Allergist'>Allergist</option>
+                <option value='Cardiologist'>Cardiologist</option>
+                <option value='Pediatricians'>Pediatricians</option>
             </select>
         </div>
         <div class="form-group">
