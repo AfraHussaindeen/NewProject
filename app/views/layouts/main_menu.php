@@ -21,7 +21,12 @@
       <ul class="nav navbar-nav">
         <?php foreach($menu as $key=>$val):
             $active = ($val == $currentPage)?'active' : '' ;?>
-            <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
+            <?php if($key =="Login"):?>
+              <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
+            <?php else: ?>
+              <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
+            <?php endif;?>
+            
         <?php endforeach;?>
       </ul>
       

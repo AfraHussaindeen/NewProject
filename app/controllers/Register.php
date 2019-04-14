@@ -90,12 +90,13 @@ class Register extends Controller{
                 'regNumber'=>[
                     'display'=>'Register Number',
                     'required'=> true,
-                    'unique' =>'users',
+                    'unique' =>'users'
                 ],
                 'contact'=>[
                     'display'=>'Contact Number',
                     'required'=> true,
-                    'unique' =>'users',
+                    //'unique' =>'users',
+                    'is_numeric' => true
                 ]
             ]);
 
