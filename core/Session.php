@@ -26,4 +26,33 @@ class Session{
         $newString=preg_replace($regx , '' ,$uagent);
         return $newString;
     }
+
+    /**
+     * Add a session alert message 
+     * @method addMsg
+     * @param string $type can be info , success , warning or danger
+     * @param string $msg the message you want to display in the alert
+     */
+
+    public static function addMsg($type,$msg){
+        $sessionName = 'alert-'.$type;
+        self::set($sessionName,$msg);
+    }
+
+    public static function displayMsg(){
+        $alerts=['alert-info','alert-success' , 'alert-warning' , 'alert-danger'];
+        $html='';
+        foreach( $alerts as $alert){
+            if(self::exists($alert)){
+                $html .= '<div class="alert '.$alert.' alert-dismissable" role ="alert" >';
+                $html .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>';
+                $html .= self::get($alert);
+                $html .= '</div>';
+                $html .= self::delete($alert);
+            }
+        }
+        return $html;
+    }
 }

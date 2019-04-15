@@ -9,6 +9,7 @@ class OverseasTraining extends Controller{
 
     public function indexAction(){
         $validation = new Validate();
+        $submitted = false;
         $posted_values =['nameInitial'=>'', 'regNumber'=>'', 'email'=>'' , 'contact'=>'' , 'field'=>'', 'departure'=>'','arrival'=>''];
         if($_POST){
           $posted_values = posted_values($_POST);
@@ -27,11 +28,15 @@ class OverseasTraining extends Controller{
           if ($validation->passed()){
             $newForm = new Training();
             $newForm->addNewApplication($_POST);
-            echo "<script type='text/javascript'>alert('Successfully Submitted!')</script>";
+            Session::addMsg('success','Successfully Submitted.');
+            $submitted=true;
           }
-
-          
         }
+
+        if($submitted){
+          $posted_values =['nameInitial'=>'', 'regNumber'=>'', 'email'=>'' ,  'subject'=>'', 'message'=>''];
+        }
+    $this->view->post = $posted_values;
     $this->view->displayErrors = $validation->displayErrors();
     $this->view->render('overseasTraining/index');
 
