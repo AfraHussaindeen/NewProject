@@ -51,6 +51,7 @@ class Register extends Controller{
 
     public function registerAction(){
         $validation = new Validate();
+        $submitted=false;
         $posted_values =['fname'=>'', 'nameInitial'=>'', 'nicNumber'=>'' , 'email'=>'' , 'password'=>'', 'confirm'=>'','regNumber'=>'','contact'=>'' ];
         if($_POST){
             $posted_values = posted_values($_POST);
@@ -103,12 +104,18 @@ class Register extends Controller{
             if ($validation->passed()){
                 $newUser = new Users();
                 $newUser->registerNewUser($_POST);
-                Router::redirect('register/login');
+                Session::addMsg('success','Successfully Registered.');
+                $submitted=true;
             }
         }
         $this->view->post = $posted_values;
         $this->view->displayErrors = $validation->displayErrors();
-        $this->view->render('register/register');
+        if($submitted){
+            $this->view->render('register/login');
+        }else{
+            $this->view->render('register/register');
+        }
+        
     }
 }
 
