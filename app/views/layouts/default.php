@@ -15,6 +15,8 @@
     <title><?= $this->siteTitle();?></title>
     <?= $this->content('head');?>
     <link href='css/bootstrap.min.css' rel='stylesheet'>
+    
+
   </head>
 
   <body>
