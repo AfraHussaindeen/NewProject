@@ -1,4 +1,6 @@
 
+<?php $this->setSiteTitle('TCService- Home Page');?>
+
 <?php $this->start('head');?>
 
 <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -24,7 +26,7 @@
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 text ftco-animate">
             <h1 class="mb-4"><span>Teritary Care Service</span> </h1>
-            <h2 class=" mb-4" ><span>Ministry Of Health</span></h2>
+            <h2 class=" mb-4 font-weight-bold "  ><span>Ministry Of Health</span></h2>
           </div>
         </div>
         </div>
@@ -36,7 +38,7 @@
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-10 text ftco-animate">
             <h1 class="mb-4"><span>Teritary Care Service</span></h1>
-            <h2 class=" mb-4 align-items-center" ><span>Ministry Of Health</span></h2>
+            <h2 class=" mb-4 align-items-center  font-weight-bold" >Ministry Of Health</span></h2>
           </div>
         </div>
         </div>
