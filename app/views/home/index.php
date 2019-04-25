@@ -20,9 +20,9 @@
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-6 text ftco-animate">
-            <h1 class="mb-4"><span>Teritary Care Service</span> </h1>
-            <h2 class=" mb-4 font-weight-bold "  ><span>Ministry Of Health</span></h2>
+          <div class="col-md-10 ">
+            <h1 class="font_type "><span>Teritary Care Service</span></h1>
+            <h2 class=" font_type "  >Ministry Of Health</h2>
           </div>
         </div>
         </div>
@@ -33,8 +33,8 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-10 text ftco-animate">
-            <h1 class="mb-4"><span>Teritary Care Service</span></h1>
-            <h2 class=" mb-4 align-items-center  font-weight-bold" >Ministry Of Health</span></h2>
+            <h1 class="mb-4 font_type ">Teritary Care Service</h1>
+            <h2 class=" mb-4 font_type" >Ministry Of Health</h2>
           </div>
         </div>
         </div>
@@ -45,7 +45,7 @@
 
     <section class="ftco-services ftco-no-pb">
 			<div class="container">
-				<div class="row no-gutters">
+				<div class="row no-gutters font_type">
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
@@ -96,7 +96,17 @@
 		
 
   <!-- loader -->
-  
+  <style>
+  .font_type{
+        font-family:    Georgia, sans-serif; 
+        font-weight:bold;
+        text-align: center;
+        color: #104979;
+    }
+  .font_colour{
+    color: #104979;
+  }
+</style>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
