@@ -15,12 +15,23 @@
             "Register" :["login" , "register"]
         },
         "Register" : ["logout"],
-        "Tools" : ["*"],
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
         "OverseasTraining" :["*"],
         "Notice" : ["*"]
 
+    },
+
+    "subjectClerkL":{
+        "denied" :{
+            "OverseasTraining" :["*"],
+            "Contact" : ["*"],
+            "Register" :["login" , "register"]
+        },
+        "Home" : ["*"],
+        "Register" : ["logout"],
+        "DocumentDetails" : ["*"],
+        "Notice" : ["*"]
     }
 
 }
