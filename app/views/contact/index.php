@@ -10,7 +10,7 @@
             <!-- <h6>Telephone number - 07705015830</h6> -->
         </div>
        
-        <div class="col-md-6 panel panel-default ">
+        <div class="col-md-6 panel panel-default well">
             <form class="my-form panel-body" action="" method='post'>
                 <div class="bg-danger"><?= $this->displayErrors?></div>
                 <div class="form-group">

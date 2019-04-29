@@ -28,10 +28,10 @@
             "Contact" : ["*"],
             "Register" :["login" , "register"]
         },
-        "Home" : ["*"],
+        "Home" : ["*"], 
         "Register" : ["logout"],
         "DocumentDetails" : ["*"],
-        "Notice" : ["*"]
+        "Letter" :["*"]
     }
 
 }

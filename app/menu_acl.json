@@ -4,8 +4,17 @@
     "Overseas Training" : "overseasTraining",
     "Notice and Circulars" : "notice",
     "Contact" : "contact",
+    "Submission of letters":{
+        "Submitted Letters" : "letter",
+        "New Submission" : "letter/add"
+    },
     "Login" : "register/login",
-    "Logout" : "register/logout"
+    "Logout" : "register/logout",
+    "Test" :{
+        "My contacts" : "test",
+        "Add contact" : "test/add"
+    } 
+   
    
 
 
