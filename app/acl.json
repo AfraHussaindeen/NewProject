@@ -12,13 +12,15 @@
 
     "LoggedIn" :{
         "denied" : {
-            "Register" :["login" , "register"]
+            "Register" :["login" , "register"],
+            "Letter" :["index","add","delete"]
         },
-        "Register" : ["logout"],
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
         "OverseasTraining" :["*"],
-        "Notice" : ["*"]
+        "Notice" : ["*"],
+        "Letter":["checkSubmission"],
+        "Register" :["logout"]
 
     },
 
@@ -26,7 +28,8 @@
         "denied" :{
             "OverseasTraining" :["*"],
             "Contact" : ["*"],
-            "Register" :["login" , "register"]
+            "Register" :["login" , "register"],
+            "Letter":["checkSubmission"]
         },
         "Home" : ["*"], 
         "Register" : ["logout"],

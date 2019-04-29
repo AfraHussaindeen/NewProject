@@ -60,8 +60,19 @@ class Letter extends Controller{
       Router::redirect('letter');
     }
 
-    public function checkSubmissionAction($nicNumber){
-      return $this->LettersModel->checkSubmission($nicNumber);
+    public function checkSubmissionAction(){
+      $nicNumber=currentUser()->nicNumber;
+      $check=$this->LettersModel->checkSubmission($nicNumber);
+      if (!$check){
+        Session::addMsg('danger','No submissions are currently available.');
+        $this->view->render('letter/blank');
+       
+      }else{
+        $this->view->subDetails=$check;
+        $this->view->render('letter/check');
+      }
+
+      
       
     }
 }

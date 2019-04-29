@@ -2,18 +2,16 @@
     "Home" : "home",
     "Document Details" : "documentDetails",
     "Overseas Training" : "overseasTraining",
-    "Notice and Circulars" : "notice",
-    "Contact" : "contact",
     "Submission of letters":{
         "Submitted Letters" : "letter",
         "New Submission" : "letter/add"
     },
+    "Check Submission State" : "letter/checkSubmission",
+    "Notice and Circulars" : "notice",
+    "Contact" : "contact",
     "Login" : "register/login",
-    "Logout" : "register/logout",
-    "Test" :{
-        "My contacts" : "test",
-        "Add contact" : "test/add"
-    } 
+    "Logout" : "register/logout"
+    
    
    
 

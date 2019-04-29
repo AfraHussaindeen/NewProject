@@ -20,8 +20,15 @@ class Letters extends Model{
     }
 
     public function checkSubmission($nicNumber){
-        return self::findByNIC($nicNumber);
+        $check= $this->find(['conditions'=>"nicNumber = ?" , 'bind' =>[$nicNumber]]);
+        if(count($check)==1){
+            return $check;
+        }else{
+            return false;
+        }
     }
+
+    
 
    
 }
