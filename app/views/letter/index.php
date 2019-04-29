@@ -2,6 +2,7 @@
 <?php $this->setSiteTitle('Letter Submission');?>
 
 <?php $this->start('body'); ?>
+
 <h1 class="text-center ">Submitted Letters </h1>
 <table class="table table-striped table-condensed table-bordered">
     <thead>
@@ -29,7 +30,11 @@
             <td><?= $submission->dateStage3 ?></td>
             <td><?= $submission->dateStage4 ?></td>
             <td><?= $submission->dateStage5 ?></td>
-            <td></td>
+            <td>
+                <a href="<?=PROOT?>test/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs">
+                    <i class="glyphicon glyphicon-remove "></i>Delete
+                </a>
+            </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
