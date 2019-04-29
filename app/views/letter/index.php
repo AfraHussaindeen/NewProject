@@ -31,7 +31,7 @@
             <td><?= $submission->dateStage4 ?></td>
             <td><?= $submission->dateStage5 ?></td>
             <td>
-                <a href="<?=PROOT?>test/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs">
+                <a href="<?=PROOT?>letter/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs" onclick="if(!confirm('Are you sure?')){return false;}">
                     <i class="glyphicon glyphicon-remove "></i>Delete
                 </a>
             </td>

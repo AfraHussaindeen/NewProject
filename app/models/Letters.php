@@ -17,7 +17,9 @@ class Letters extends Model{
             return false;
         }
     
-}
+    }
+
+    
 
    
 }

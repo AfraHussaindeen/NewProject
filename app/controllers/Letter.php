@@ -50,4 +50,11 @@ class Letter extends Controller{
     $this->view->render('letter/add');
 
     }
+
+    public function deleteAction($id){
+      if($this->LettersModel->findById($id)){
+          $this->LettersModel->delete($id);
+      }
+      Router::redirect('letter');
+    }
 }
