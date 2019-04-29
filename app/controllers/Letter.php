@@ -26,11 +26,13 @@ class Letter extends Controller{
               ],
               'nicNumber'=>[
                   'display'=>'NIC number',
-                 'required' => true
+                 'required' => true,
+                 'unique' =>true
               ],
               'regNumber' =>[
                   'display'=>'Reg number',
-                 'required' => true
+                 'required' => true,
+                 'unique'=>true
               ]
           ]);
           
@@ -56,5 +58,10 @@ class Letter extends Controller{
           $this->LettersModel->delete($id);
       }
       Router::redirect('letter');
+    }
+
+    public function checkSubmissionAction($nicNumber){
+      return $this->LettersModel->checkSubmission($nicNumber);
+      
     }
 }

@@ -55,6 +55,9 @@ class Model{
         return $this->findFirst(['conditions'=>"id = ?" , 'bind' =>[$id]]);
     }
 
+    public function findByNIC($nicNumber){
+        return $this->findFirst(['conditions'=>"nicNumber = ?" , 'bind' =>[$nicNumber]]);
+    }
 
     public function insert($fields){
         if (empty($fields)) return false ;

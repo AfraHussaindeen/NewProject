@@ -19,7 +19,9 @@ class Letters extends Model{
     
     }
 
-    
+    public function checkSubmission($nicNumber){
+        return self::findByNIC($nicNumber);
+    }
 
    
 }
