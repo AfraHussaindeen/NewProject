@@ -27,6 +27,7 @@ class Model{
     public function find($params =[]){
         $results=[]; 
         $resultsQuery= $this->_db->find($this->_table , $params);
+        if(!$resultsQuery) return [] ;
         foreach($resultsQuery as $result){
             $obj = new $this->_modelName($this->_table);
             $obj->populateObjData($result);
@@ -54,6 +55,9 @@ class Model{
         return $this->findFirst(['conditions'=>"id = ?" , 'bind' =>[$id]]);
     }
 
+    public function findByNIC($nicNumber){
+        return $this->findFirst(['conditions'=>"nicNumber = ?" , 'bind' =>[$nicNumber]]);
+    }
 
     public function insert($fields){
         if (empty($fields)) return false ;

@@ -12,15 +12,29 @@
 
     "LoggedIn" :{
         "denied" : {
-            "Register" :["login" , "register"]
+            "Register" :["login" , "register"],
+            "Letter" :["index","add","delete"]
         },
-        "Register" : ["logout"],
-        "Tools" : ["*"],
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
         "OverseasTraining" :["*"],
-        "Notice" : ["*"]
+        "Notice" : ["*"],
+        "Letter":["checkSubmission"],
+        "Register" :["logout"]
 
+    },
+
+    "subjectClerkL":{
+        "denied" :{
+            "OverseasTraining" :["*"],
+            "Contact" : ["*"],
+            "Register" :["login" , "register"],
+            "Letter":["checkSubmission"]
+        },
+        "Home" : ["*"], 
+        "Register" : ["logout"],
+        "DocumentDetails" : ["*"],
+        "Letter" :["*"]
     }
 
 }

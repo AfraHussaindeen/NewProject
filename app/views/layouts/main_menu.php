@@ -20,14 +20,27 @@
     <div class="collapse navbar-collapse" id="main_menu">
       <ul class="nav navbar-nav">
         <?php foreach($menu as $key=>$val):
-            $active = ($val == $currentPage)?'active' : '' ;?>
-            <?php if($key =="Login"):?>
-              <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
-            <?php else: ?>
-              <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
-            <?php endif;?>
-            
-        <?php endforeach;?>
+          $active = '';?>
+          <?php if (is_array($val)): ?>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              <?php foreach($val as $k=>$v):
+                $active = ($v==$currentPage)? 'active':''; ?>
+                <?php if($k== 'seperator'): ?>
+                  <li role="seperator" class="divider"></li>
+                <?php else: ?>
+                  <li><a class="<?=$active?>" href="<?=$v?>"><?=$k?></a></li>
+                <?php endif; ?>
+              <?php endforeach; ?>
+              </ul>
+            </li>
+          <?php else: 
+            $active= ($val == $currentPage )? 'active':''; ?>
+            <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
