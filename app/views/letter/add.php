@@ -1,8 +1,9 @@
 
-<?php $this->siteTitle('New Submission');?>
+<?php $this->setSiteTitle('New Submission');?>
+
 <?php $this->start('body');?>
     <div class="col-md-8 col-md-offset-2 well">
-        <h2 class="text-center">Add a contact</h2>
+        <h2 class="text-center ">New Submission</h2>
         <hr>
         <div class="bg-danger"><?= $this->displayErrors?></div>
         <form class="form" action="" method="post">
@@ -20,11 +21,9 @@
             </div> 
         
             <div class='pull-right '>
-                <input type='submit' class='btn btn-primary btn-large btn-primary-spacing' value='Submit'>
+                <input type='submit' class='btn btn-primary btn-large btn-primary-spacing' value='Submit' >
             </div>
-            <div class='pull-right'>
-                <input type='submit' class='btn btn-default btn-large' value='Cancel'>
-            </div>
+           
 
         </form>
 
