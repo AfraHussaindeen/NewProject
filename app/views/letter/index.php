@@ -1,5 +1,5 @@
 
-<?php $this->setSiteTitle('Letter Submission');?>
+<?php $this->setSiteTitle('Submitted Letters');?>
 
 <?php $this->start('body'); ?>
 
@@ -31,8 +31,11 @@
             <td><?= $submission->dateStage4 ?></td>
             <td><?= $submission->dateStage5 ?></td>
             <td>
-                <a href="<?=PROOT?>letter/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs" onclick="if(!confirm('Are you sure?')){return false;}">
+                <a href="<?=PROOT?>letter/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs" onclick="if(!confirm('Are you sure that you want to delete?')){return false;}">
                     <i class="glyphicon glyphicon-remove "></i>Delete
+                </a>
+                <a href="<?=PROOT?>letter/nextStage/<?=$submission->id?>" class="btn  btn-info btn-xs" onclick="if(!confirm('Are you sure that you want to move to the next stage?')){return false;}">
+                    </i>Next
                 </a>
             </td>
             </tr>

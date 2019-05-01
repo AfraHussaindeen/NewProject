@@ -1,6 +1,8 @@
 <?php
 
 class Letter extends Controller{
+
+
     public function __construct($controller,$action){
         parent::__construct($controller,$action);
         $this->view->setLayout('default');
@@ -22,20 +24,19 @@ class Letter extends Controller{
           $validation->check($_POST ,[
               'nameInitial'=>[
                 'display'=>'Name with Initials',
-                  'required'=> true
+                'required'=> true
               ],
               'nicNumber'=>[
                   'display'=>'NIC number',
                  'required' => true,
-                 'unique' =>true
+                 'unique' =>"letters"
               ],
               'regNumber' =>[
                   'display'=>'Reg number',
                  'required' => true,
-                 'unique'=>true
+                 'unique'=>"letters"
               ]
           ]);
-          
           if ($validation->passed()){
             $newForm = new Letters();
             $newForm->addNewSubmission($_POST);
@@ -71,8 +72,16 @@ class Letter extends Controller{
         $this->view->subDetails=$check;
         $this->view->render('letter/check');
       }
+      
+    }
 
-      
-      
+    public function nextStageAction($id){
+        $stageName= $this->LettersModel->getStage($id);
+        if($stageName != "Stage6"){
+          $stage = new $stageName($id); 
+          $stage->next();
+        }
+        Router::redirect('letter');
+    
     }
 }

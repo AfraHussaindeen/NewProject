@@ -1,4 +1,4 @@
-<?php $this->siteTitle('State of Submitted Letter')?>
+<?php $this->setSiteTitle('State of Submitted Letter')?>
 
 <?php $this->start('body');?>
 
