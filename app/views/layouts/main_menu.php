@@ -3,10 +3,19 @@
     $currentPage=currentPage();
 ?>
 
-<nav class="navbar navbar-default ">
-  <div class="container-fluid">
+<nav class="navbar navbar-default bootsnav ">
+  <div class="container">
+     <!-- Start Header Navigation -->
+     <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- <a class="navbar-brand" href="#brand"><img src="LOGO_ADDRESS" class="logo" alt=""></a> -->
+            <a class="navbar-brand" href="#">TCService</a>
+        </div>
+        <!-- End Header Navigation -->
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="#main_menu" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -14,7 +23,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">TCService</a>
-    </div>
+    </div> -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main_menu">
