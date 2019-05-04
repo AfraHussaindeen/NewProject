@@ -3,7 +3,7 @@
     $currentPage=currentPage();
 ?>
 
-<nav class="navbar navbar-default bootsnav ">
+<nav class="navbar navbar-default  ">
   <div class="container">
      <!-- Start Header Navigation -->
      <div class="navbar-header">
@@ -14,20 +14,10 @@
             <a class="navbar-brand" href="#">TCService</a>
         </div>
         <!-- End Header Navigation -->
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!-- <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="#main_menu" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">TCService</a>
-    </div> -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main_menu">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         <?php foreach($menu as $key=>$val):
           $active = '';?>
           <?php if (is_array($val)): ?>
