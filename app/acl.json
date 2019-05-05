@@ -35,6 +35,18 @@
         "Register" : ["logout"],
         "DocumentDetails" : ["*"],
         "Letter" :["*"]
+    },
+    "subjectClerkO":{
+        "denied" :{
+            "OverseasTraining" :["*"],
+            "Contact" : ["*"],
+            "Register" :["login" , "register"],
+            "Letter" :["*"]
+        },
+        "Home" : ["*"], 
+        "Register" : ["logout"],
+        "DocumentDetails" : ["*"]
+        
     }
 
 }
