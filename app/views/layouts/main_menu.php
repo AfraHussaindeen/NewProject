@@ -12,19 +12,20 @@
             </button>
             <ul class="navbar-brand list-inline">
               <li><img src="css/logo.png" width="60px" height="70px" class="logo"  alt=""></li>
-              <li><span class="font_type"><span style=@>TC</span>Service</span></li>
+              <li class="font_type" style="color: white ; font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 25px">TCService</li>
             </ul>
       </div>
         <!-- End Header Navigation -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="main_menu">
+    
+    <div class="collapse navbar-collapse" style="padding-top: 23px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 15px" id="main_menu">
       <ul class="nav navbar-nav navbar-left">
         <?php foreach($menu as $key=>$val):
           $active = '';?>
           <?php if (is_array($val)): ?>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?><span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?>i<span class="caret"></span></a>
               <ul class="dropdown-menu">
               <?php foreach($val as $k=>$v):
                 $active = ($v==$currentPage)? 'active':''; ?>
@@ -55,12 +56,15 @@
           </li>
 
           <?php else:?>
-          <li><a href="<?=PROOT?>register/logout">Logout</a></li>
+          <li><a href="<?=PROOT?>register/login">Login</a></li>
         <?php endif;?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
 <style>
 
 .navbar-custom {
