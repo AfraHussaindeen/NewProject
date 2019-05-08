@@ -3,7 +3,9 @@
     $currentPage=currentPage();
 ?>
 
-<nav class="navbar navbar-custom  " style="height: 100px   ">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<nav class="navbar navbar-custom   " style="height: 100px   ">
   <div class="container-fluid ">
      <!-- Start Header Navigation -->
      <div class="navbar-header">
@@ -24,8 +26,8 @@
         <?php foreach($menu as $key=>$val):
           $active = '';?>
           <?php if (is_array($val)): ?>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?>i<span class="caret"></span></a>
+            <li class="dropdown"  style="z-index=10000">
+              <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?>i<span class="caret"></span></a>
               <ul class="dropdown-menu">
               <?php foreach($val as $k=>$v):
                 $active = ($v==$currentPage)? 'active':''; ?>
@@ -49,14 +51,14 @@
       <ul class="nav navbar-nav navbar-right">
         <?php if(currentUser()): ?>
            <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=currentUser()->fname;?> <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user "></i><?=currentUser()->fname;?> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="<?=PROOT?>register/logout">Logout</a></li>
+              <li><a href="<?=PROOT?>register/logout"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
             </ul>
           </li>
 
           <?php else:?>
-          <li><a href="<?=PROOT?>register/login">Login</a></li>
+          <li><a href="<?=PROOT?>register/login"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
         <?php endif;?>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -100,3 +102,4 @@
 .navbar-custom .icon-bar {
     background-color:#42659D;
 }</style>
+
