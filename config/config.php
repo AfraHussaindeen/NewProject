@@ -1,4 +1,8 @@
 <?php
+define ('DB_NAME','newproject');
+define ('DB_USER','root');
+define ('DB_PASSWORD','');
+define ('DB_HOST','127.0.0.1');
 
 define ("DEFAULT_CONTROLLER","Home"); //default value if there isn't one define
 define ('DEBUG',true);
