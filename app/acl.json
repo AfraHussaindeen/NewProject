@@ -45,8 +45,13 @@
         },
         "Home" : ["*"], 
         "Register" : ["logout"],
+<<<<<<< HEAD
         "DocumentDetails" : ["*"],
         "SubmittedApplication":["*"]
+=======
+        "DocumentDetails" : ["*"]
+        
+>>>>>>> 1296dbc26c6e5239b96d8192b722d591184c8663
     }
 
 }
