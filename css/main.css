@@ -176,12 +176,20 @@
   }
   
   .column1 {
+<<<<<<< HEAD
     width: 200px;
+=======
+    width: 135px;
+>>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
     padding-left: 40px;
   }
   
   .column2 {
+<<<<<<< HEAD
     width: 100px;
+=======
+    width: 130px;
+>>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
   }
   
   .column3 {
@@ -193,7 +201,11 @@
   }
   
   .column5 {
+<<<<<<< HEAD
     width: 130px;
+=======
+    width: 117px;
+>>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
   }
   .column6 {
     width: 117px;
@@ -202,7 +214,11 @@
     width: 117px;
   }
   .column8 {
+<<<<<<< HEAD
     width: 150px;
+=======
+    width: 200px;
+>>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
   }
   
   .table100-head th {
