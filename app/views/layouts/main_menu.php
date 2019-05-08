@@ -3,7 +3,7 @@
     $currentPage=currentPage();
 ?>
 
-<nav class="navbar navbar-default  " style="height: 100px   ">
+<nav class="navbar navbar-custom  " style="height: 100px   ">
   <div class="container-fluid ">
      <!-- Start Header Navigation -->
      <div class="navbar-header">
@@ -47,9 +47,52 @@
       
       <ul class="nav navbar-nav navbar-right">
         <?php if(currentUser()): ?>
-            <li><a href="#">Hello <?=currentUser()->fname ?> </a></li>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=currentUser()->fname;?> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="<?=PROOT?>register/logout">Logout</a></li>
+            </ul>
+          </li>
+
+          <?php else:?>
+          <li><a href="<?=PROOT?>register/logout">Logout</a></li>
         <?php endif;?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<style>
+
+.navbar-custom {
+    background-color:#0c366dfb;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #42659D;
+}
+
+.navbar-custom .navbar-brand {
+    color:#42659D;
+}
+.navbar-custom .navbar-toggle {
+    background-color:white;
+}
+.navbar-custom .icon-bar {
+    background-color:#42659D;
+}</style>
