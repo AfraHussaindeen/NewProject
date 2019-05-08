@@ -32,7 +32,7 @@
             <td><?= $submission->dateStage5 ?></td>
             <td>
                 <a href="<?=PROOT?>letter/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs" onclick="if(!confirm('Are you sure that you want to delete?')){return false;}">
-                    <i class="glyphicon glyphicon-remove "></i>Delete
+                    <i class="glyphicon glyphicon-trash"></i>Delete
                 </a>
                 <a href="<?=PROOT?>letter/nextStage/<?=$submission->id?>" class="btn  btn-info btn-xs" onclick="if(!confirm('Are you sure that you want to move to the next stage?')){return false;}">
                     </i>Next

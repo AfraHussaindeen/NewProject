@@ -3,21 +3,23 @@
     $currentPage=currentPage();
 ?>
 
-<nav class="navbar navbar-default  ">
-  <div class="container">
+<nav class="navbar navbar-default  " style="height: 100px   ">
+  <div class="container-fluid ">
      <!-- Start Header Navigation -->
      <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_menu">
                 <i class="fa fa-bars"></i>
             </button>
-            <!-- <a class="navbar-brand" href="#brand"><img src="LOGO_ADDRESS" class="logo" alt=""></a> -->
-            <a class="navbar-brand" href="#">TCService</a>
-        </div>
+            <ul class="navbar-brand list-inline">
+              <li><img src="css/logo.png" width="60px" height="70px" class="logo"  alt=""></li>
+              <li><span class="font_type"><span style=@>TC</span>Service</span></li>
+            </ul>
+      </div>
         <!-- End Header Navigation -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main_menu">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left">
         <?php foreach($menu as $key=>$val):
           $active = '';?>
           <?php if (is_array($val)): ?>
@@ -39,6 +41,7 @@
             <li><a class="<?=$active?>" href="<?=$val?>"><?=$key?></a></li>
           <?php endif; ?>
         <?php endforeach; ?>
+        
       
       </ul>
       

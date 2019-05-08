@@ -49,7 +49,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-doctor"></span>
+            		<span class="glyphicon glyphicon-folder-open"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Document Details</h3>
@@ -60,7 +60,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-ambulance"></span>
+            		<span class="glyphicon glyphicon-education"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Overseas Training</h3>
@@ -71,7 +71,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-stethoscope"></span>
+            		<span class="glyphicon  glyphicon-list-alt"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Notices and Circulars</h3>
@@ -82,7 +82,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-24-hours"></span>
+            		<span class="glyphicon glyphicon-envelope"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Contact</h3>
