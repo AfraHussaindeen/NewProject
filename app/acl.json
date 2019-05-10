@@ -6,8 +6,7 @@
         "Contact" : ["*"],
         "Register" : ["login" , "register"],
         "Restricted" : ["*"],
-        "Notice" : ["*"],
-        "SubmittedApplication":["*"]
+        "Notice" : ["*"]
     } ,
 
     "LoggedIn" :{
