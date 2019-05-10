@@ -8,7 +8,14 @@
     },
     "Check Submission State" : "letter/checkSubmission",
     "Notice and Circulars" : "notice",
+<<<<<<< HEAD
     "Contact" : "contact"
+=======
+    "Contact" : "contact",
+    "Login" : "register/login",
+    "Logout" : "register/logout",
+    "Submitted Overseas Training Applications": "SubmittedApplication"
+>>>>>>> SubjectClerkOverseas
     
    
    

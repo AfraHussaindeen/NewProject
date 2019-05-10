@@ -6,7 +6,12 @@
         "Contact" : ["*"],
         "Register" : ["login" , "register"],
         "Restricted" : ["*"],
+<<<<<<< HEAD
         "Notice" : ["*"]
+=======
+        "Notice" : ["*"],
+        "SubmittedApplication":["*"]
+>>>>>>> SubjectClerkOverseas
     } ,
 
     "LoggedIn" :{
@@ -34,6 +39,28 @@
         "Register" : ["logout"],
         "DocumentDetails" : ["*"],
         "Letter" :["*"]
+    },
+    "subjectClerkO":{
+        "denied" :{
+            "OverseasTraining" :["*"],
+            "Contact" : ["*"],
+            "Register" :["login" , "register"],
+            "Letter" :["*"]
+        },
+        "Home" : ["*"], 
+        "Register" : ["logout"],
+<<<<<<< HEAD
+        "DocumentDetails" : ["*"],
+        "SubmittedApplication":["*"]
+=======
+<<<<<<< HEAD
+        "DocumentDetails" : ["*"],
+        "SubmittedApplication":["*"]
+=======
+        "DocumentDetails" : ["*"]
+        
+>>>>>>> 1296dbc26c6e5239b96d8192b722d591184c8663
+>>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
     }
 
 }
