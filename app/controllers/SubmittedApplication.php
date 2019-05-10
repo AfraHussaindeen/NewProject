@@ -16,10 +16,7 @@ class SubmittedApplication extends Controller{
         $this->view->render('SubmittedApplication/index');
         
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> SubjectClerkOverseas
+
     public function editAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if(!$submittedApplication){
@@ -45,7 +42,7 @@ class SubmittedApplication extends Controller{
             if ($validation->passed()){
                 $submittedApplication->save();
                 $submittedApplication=$this->TrainingModel->update((int)$id,['status'=>'1']);
-<<<<<<< HEAD
+
                 
                     $name = $_POST['nameInitial'];
                     $email = $_POST['email'];
@@ -73,9 +70,7 @@ class SubmittedApplication extends Controller{
                   
                   
                     Router::redirect('SubmittedApplication');
-=======
-                Router::redirect('SubmittedApplication');
->>>>>>> SubjectClerkOverseas
+
             }
         }
         $this->view->displayErrors=$validation->displayErrors();
@@ -83,11 +78,7 @@ class SubmittedApplication extends Controller{
         $this->view->postAction= PROOT.'SubmittedApplication'.DS.'edit'.DS.$submittedApplication->id;
         $this->view->render('SubmittedApplication/edit');
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
->>>>>>> SubjectClerkOverseas
+
     public function detailsAction($id){
         $notupdated=$this->TrainingModel->findByIdAndUserId((int)$id);
         
@@ -97,10 +88,7 @@ class SubmittedApplication extends Controller{
         $this->view->SubmittedApplication=$notupdated;
         $this->view->render('SubmittedApplication/details');
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> SubjectClerkOverseas
+
     public function deleteAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if($submittedApplication){
@@ -109,9 +97,5 @@ class SubmittedApplication extends Controller{
         }
         Router::redirect('SubmittedApplication');
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
->>>>>>> SubjectClerkOverseas
+
 }
