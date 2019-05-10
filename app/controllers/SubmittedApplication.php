@@ -16,7 +16,6 @@ class SubmittedApplication extends Controller{
         $this->view->render('SubmittedApplication/index');
         
     }
-<<<<<<< HEAD
     public function editAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if(!$submittedApplication){
@@ -50,8 +49,6 @@ class SubmittedApplication extends Controller{
         $this->view->postAction= PROOT.'SubmittedApplication'.DS.'edit'.DS.$submittedApplication->id;
         $this->view->render('SubmittedApplication/edit');
     }
-=======
->>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
     public function detailsAction($id){
         $notupdated=$this->TrainingModel->findByIdAndUserId((int)$id);
         
@@ -61,7 +58,6 @@ class SubmittedApplication extends Controller{
         $this->view->SubmittedApplication=$notupdated;
         $this->view->render('SubmittedApplication/details');
     }
-<<<<<<< HEAD
     public function deleteAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if($submittedApplication){
@@ -70,6 +66,4 @@ class SubmittedApplication extends Controller{
         }
         Router::redirect('SubmittedApplication');
     }
-=======
->>>>>>> 09d4dcc509cab799111b72258a3e04b77778f998
 }
