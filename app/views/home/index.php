@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/style.css">
@@ -17,24 +18,24 @@
 <section class="home-slider owl-carousel">
 
 <div class="slider-item" style="background-image:url(css/bg_2.jpg);" data-stellar-background-ratio="0.5">
-      	<div class="overlay"></div>
+      	
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-10 ">
-            <h1 class="font_type "><span>Teritary Care Service</span></h1>
-            <h2 class=" font_type "  >Ministry Of Health</h2>
+          <div class="col-md-10  " style="height:0px">
+            <h1 class="font_type "  style="text-align:left; color:black" >Teritary Care Service</h1>
+            <h2 class=" font_type "  style="text-align:left; color:black" >Ministry Of Health</h2>
           </div>
         </div>
         </div>
       </div>
 
       <div class="slider-item" style="background-image:url(css/intro.jpg);" data-stellar-background-ratio="0.5">
-      	<div class="overlay"></div>
+      	
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-10 text ftco-animate">
-            <h1 class="mb-4 font_type ">Teritary Care Service</h1>
-            <h2 class=" mb-4 font_type" >Ministry Of Health</h2>
+            <h1 class=" font_type ">Teritary Care Service</h1>
+            <h2 class="  font_type" >Ministry Of Health</h2>
           </div>
         </div>
         </div>
@@ -49,7 +50,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-doctor"></span>
+            		<span class="glyphicon glyphicon-folder-open"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Document Details</h3>
@@ -60,7 +61,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-ambulance"></span>
+            		<span class="glyphicon glyphicon-education"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Overseas Training</h3>
@@ -71,7 +72,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-stethoscope"></span>
+            		<span class="glyphicon  glyphicon-list-alt"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Notices and Circulars</h3>
@@ -82,7 +83,7 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-24-hours"></span>
+            		<span class="glyphicon glyphicon-envelope"></span>
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Contact</h3>

@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
+  --blue: #0a335f;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -18,7 +18,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
+  --primary: #0a335f;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -8242,7 +8242,7 @@ h1, h2, h3, h4, h5,
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       margin-top: -10px;
-      color: #2f89fc !important;
+      color: #252391 !important;
       -moz-transition: all 0.7s ease;
       -o-transition: all 0.7s ease;
       -webkit-transition: all 0.7s ease;
@@ -8324,7 +8324,7 @@ h1, h2, h3, h4, h5,
           position: relative; }
         .owl-carousel.home-slider .slider-item .slider-text h1 {
           font-size: 60px;
-          color: #2f89fc;
+          color: #0c1d68              ;
           line-height: 1.2;
           font-weight: 900; }
           .owl-carousel.home-slider .slider-item .slider-text h1 span {
@@ -8523,11 +8523,11 @@ h1, h2, h3, h4, h5,
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background: #2f89fc; }
+    background: #0c366dfb; }
     .ftco-services .services:nth-child(even) {
-      background: #0c75fb; }
+      background: #102d8be3; }
       .ftco-services .services:nth-child(even) .icon {
-        background: #2f89fc !important; }
+        background: #6193d4 !important; }
     .ftco-services .services .icon {
       line-height: 1.3;
       position: relative;

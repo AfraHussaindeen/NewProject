@@ -11,7 +11,7 @@ class Letter extends Controller{
 
     public function indexAction(){
         $submissions= $this->LettersModel->getAllSubmissions();
-        $this->view->submissions=$submissions; //Sending the the data $contacts to the view page.
+        $this->view->submissions=$submissions; //Sending the data $submission to the view page.
         $this->view->render('letter/index');
     }
 
@@ -38,8 +38,7 @@ class Letter extends Controller{
               ]
           ]);
           if ($validation->passed()){
-            $newForm = new Letters();
-            $newForm->addNewSubmission($_POST);
+            $this->LettersModel->addNewSubmission($_POST);
             Session::addMsg('success','Successfully Submitted.');
             $submitted=true;
           }

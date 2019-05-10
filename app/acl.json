@@ -16,7 +16,7 @@
         },
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
-        "OverseasTraining" :["*"],
+        "OverseasTraining" :["submit"],
         "Notice" : ["*"],
         "Letter":["checkSubmission"],
         "Register" :["logout"]

@@ -3,6 +3,7 @@
 class Contact extends Controller{
     public function __construct($controller , $action){
       parent::__construct($controller,$action);
+      $this->load_model('Contacts');
     }
     public function indexAction(){
                    
@@ -35,8 +36,7 @@ class Contact extends Controller{
             ]);
           
           if ($validation->passed()){
-            $newForm = new Contacts();
-            $newForm->addNewForm($_POST);
+            $this->ContactsModel->addNewForm($_POST);
             Session::addMsg('success','Successfully Submitted.');
             $submitted=true;
           }

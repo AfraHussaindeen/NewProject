@@ -3,8 +3,7 @@
 class Register extends Controller{
     public function __construct($controller , $action){
         parent::__construct($controller , $action);
-        $this->load_model('Users');
-        $this->view->setLayout('default'); 
+        $this->load_model('Users'); 
     }
 
     public function loginAction(){
@@ -102,8 +101,7 @@ class Register extends Controller{
             ]);
 
             if ($validation->passed()){
-                $newUser = new Users();
-                $newUser->registerNewUser($_POST);
+                $this->UsersModel->registerNewUser($_POST);
                 Session::addMsg('success','Successfully Registered.');
                 $submitted=true;
             }

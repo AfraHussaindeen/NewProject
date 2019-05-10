@@ -4,10 +4,9 @@ class OverseasTraining extends Controller{
     public function __construct($controller , $action){
       parent::__construct($controller,$action);
       $this->load_model('Training');
-      $this->view->setLayout('default'); 
     }
 
-    public function indexAction(){
+    public function submitAction(){
         $validation = new Validate();
         $submitted = false;
         $posted_values =['nameInitial'=>'', 'regNumber'=>'', 'email'=>'' , 'contact'=>'' , 'field'=>'', 'departure'=>'','arrival'=>''];
@@ -26,8 +25,7 @@ class OverseasTraining extends Controller{
           ]);
           
           if ($validation->passed()){
-            $newForm = new Training();
-            $newForm->addNewApplication($_POST);
+            $this->TrainingModel->addNewApplication($_POST);
             Session::addMsg('success','Successfully Submitted.');
             $submitted=true;
           }
