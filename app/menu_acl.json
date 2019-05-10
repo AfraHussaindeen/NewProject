@@ -7,11 +7,11 @@
         "New Submission" : "letter/add"
     },
     "Check Submission State" : "letter/checkSubmission",
+    "Submitted Overseas Training Applications": "SubmittedApplication",
     "Notice and Circulars" : "notice",
     "Contact" : "contact",
     "Login" : "register/login",
-    "Logout" : "register/logout",
-    "Submitted Overseas Training Applications": "SubmittedApplication"
+    "Logout" : "register/logout"
     
    
    
