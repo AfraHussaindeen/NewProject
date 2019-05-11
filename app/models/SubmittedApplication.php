@@ -17,4 +17,14 @@ class Training extends Model{
     $conditions=array_merge($conditions,$params);
     return $this->find($conditions);
 }
+
+    public function updateNotifCount($result_query){
+        $count = mysqli_num_rows($result_query);
+        return $count;
+    }
 }
+    
+    
+    
+    
+7cf

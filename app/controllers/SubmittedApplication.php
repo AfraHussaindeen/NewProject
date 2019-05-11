@@ -16,6 +16,7 @@ class SubmittedApplication extends Controller{
         $this->view->render('SubmittedApplication/index');
         
     }
+
     public function editAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if(!$submittedApplication){
@@ -41,33 +42,7 @@ class SubmittedApplication extends Controller{
             if ($validation->passed()){
                 $submittedApplication->save();
                 $submittedApplication=$this->TrainingModel->update((int)$id,['status'=>'1']);
-                
-                    $name = $_POST['nameInitial'];
-                    $email = $_POST['email'];
-                    $subject = $_POST['email'];
-                    $msg = $_POST['field'];
-                    // Content-Type helps email client to parse file as HTML 
-                    // therefore retaining styles
-                    $headers = "From:yogyagamage@gmail.com \r\n" ;
-                    $header .= "MIME-Version: 1.0\r\n";
-                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                    $message = "<html>
-                    <head>
-                        <title>New message from website contact form</title>
-                    </head>
-                    <body>
-                        <h1>" . $subject . "</h1>
-                        <p>".$msg."</p>
-                    </body>
-                    </html>";
-                    if (mail('yogyagamage@gmail.com', $subject, $message, $headers)) {
-                        Session::addMsg('success','Successfully Sent.');;
-                    }else{
-                        Session::addMsg('unsuccess','unSuccessfull.');;
-                    }
-                  
-                  
-                    Router::redirect('SubmittedApplication');
+                Router::redirect('SubmittedApplication');
             }
         }
         $this->view->displayErrors=$validation->displayErrors();
@@ -84,6 +59,7 @@ class SubmittedApplication extends Controller{
         $this->view->SubmittedApplication=$notupdated;
         $this->view->render('SubmittedApplication/details');
     }
+
     public function deleteAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if($submittedApplication){
@@ -92,4 +68,5 @@ class SubmittedApplication extends Controller{
         }
         Router::redirect('SubmittedApplication');
     }
+
 }

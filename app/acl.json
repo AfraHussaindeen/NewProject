@@ -47,6 +47,10 @@
         "Register" : ["logout"],
         "DocumentDetails" : ["*"],
         "SubmittedApplication":["*"]
+
+        
+        
+
     }
 
 }

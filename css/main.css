@@ -4,15 +4,7 @@
 [ FONT ]*/
 
 
-@font-face {
-    font-family: Lato-Regular;
-    src: url('../fonts/Lato/Lato-Regular.ttf'); 
-  }
-  
-  @font-face {
-    font-family: Lato-Bold;
-    src: url('../fonts/Lato/Lato-Bold.ttf'); 
-  }
+
   
   /*//////////////////////////////////////////////////////////////////
   [ RESTYLE TAG ]*/
@@ -111,6 +103,14 @@
   .responsive-table tr:hover, a:focus {
     background-color:rgba(156, 156, 132, 0.1);
   }
+  .limiter {
+    width: 1366px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  
   
   .container {
     margin: 5% 3%;
@@ -120,6 +120,7 @@
       margin: 2%;
     }
   }
+
   @media (min-width: 75em) {
     .container {
       margin: 2em auto;
@@ -136,12 +137,18 @@
     .responsive-table {
       font-size: .9em;
     }
+
+  
   }
+  
+  
+  
   @media (min-width: 62em) {
     .responsive-table {
       font-size: 1em;
     }
   }
+
   .responsive-table thead {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
@@ -308,6 +315,8 @@
       content: none;
     }
   }
+
+  
   
   
   /*==================================================================

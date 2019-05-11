@@ -38,15 +38,9 @@
                                     <td data-title="Field"><?=$notupdated->field?> </td>
                                     <td data-title="Departure"><?=$notupdated->departure?> </td>
                                     <td data-title="Arrival"><?=$notupdated->arrival?> </td>
-                                    <td data-title="">
-                                    <a href="<?=PROOT?>SubmittedApplication/edit/<?=$notupdated->id?>" class="btn btn-info btn-xs">
-                                            <i class="glyphicon glyphicon-pencil"></i>Edit
-                                        </a>
-                                        <a href="<?=PROOT?>SubmittedApplication/delete/<?=$notupdated->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure you want to delete this record')){return false;}">
-                                            <i class="glyphicon glyphicon-remove"></i>Delete
-                                        </a>
-                                        </td>
-                                    </tr>
+                                    <td data-title=""></td>
+
+
                             <?php endforeach ;?>
                             <?php foreach($this->updated as $updated): ?>
                                 <tr >
@@ -62,6 +56,21 @@
                                 </tr>
                             <?php endforeach ;?>
                                 
+                            <?php endforeach ;?>
+                            <?php foreach($this->updated as $updated): ?>
+                                <tr class="row100 body">
+                                    <td >
+                                    <a href="<?=PROOT?>SubmittedApplication/details/<?=$updated->id?>" class="cell100 column1"><?=$updated->nameInitial?> </td>
+                                    <td class="cell100 column2"><?=$updated->regNumber?> </td>
+                                    <td class="cell100 column3"><?=$updated->email?> </td>
+                                    <td class="cell100 column4"><?=$updated->contact?> </td>
+                                    <td class="cell100 column5"><?=$updated->field?> </td>
+                                    <td class="cell100 column6"><?=$updated->departure?> </td>
+                                    <td class="cell100 column7"><?=$updated->arrival?> </td>
+                                </tr>
+                            <?php endforeach ;?>
+                                
+
                             </tbody>
                             </table>
                     </div>   
