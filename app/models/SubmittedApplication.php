@@ -1,29 +1,20 @@
 <?php
 
-class SubmittedApplication extends Model{
+class Training extends Model{
+
     public function __construct(){
-        $table='training';
+        $table = 'training';
         parent::__construct($table);
+        $this->_softDelete=true;
     }
-}
-    interface Observer {
-        /* Methods */
-        abstract public void update ( SplSubject $subject )
-        }
-    interface observable {
-        /* Methods */
-        abstract public void attach ( SplObserver $observer )
-        abstract public void detach ( SplObserver $observer )
-        abstract public void notify ( void )
-        }
-    class displayTable implements Observer{
-        public function update(){
-            }
-        }
-    }
-    class displayNotify implements Observer{
-        public function update(){
-            }
-        }
-    }
+
     
+   public function findAllByUserId($id,$params=[]){
+    $conditions=[
+        "conditions"=>'id= ?',
+        "bind"=>[$id]
+    ];
+    $conditions=array_merge($conditions,$params);
+    return $this->find($conditions);
+}
+}
