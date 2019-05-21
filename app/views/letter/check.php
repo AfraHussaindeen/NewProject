@@ -4,7 +4,8 @@
 
 <div class='col-md-6 col-md-offset-3 well'>
 <h1 class="text-center ">State of Submitted letter </h1>
-<table class="table table-striped table-condensed table-bordered">
+<div class="container">
+  <table class="responsive-table">
     <thead>
     
         <th>Date of Stage1</th>
@@ -29,6 +30,8 @@
             </tr>
         <?php endforeach; ?>
     </tbody>
+    </table>
+    </div>
 </div>
 
 <?php $this->end();?>

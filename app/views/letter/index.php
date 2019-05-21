@@ -4,7 +4,8 @@
 <?php $this->start('body'); ?>
 
 <h1 class="text-center ">Submitted Letters </h1>
-<table class="table table-striped table-condensed table-bordered">
+<div class="container">
+  <table class="responsive-table">
     <thead>
     
         <th>Name with Initials</th>
@@ -41,7 +42,8 @@
             </tr>
         <?php endforeach; ?>
     </tbody>
-
+    </table>
+</div>
 
 <?php $this->end(); ?>
 
