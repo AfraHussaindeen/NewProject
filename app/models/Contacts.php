@@ -11,4 +11,21 @@ class Contacts extends Model{
         self::insert($params);
     
    }
+   public function findAllByUserId($params=[]){
+    $conditions=[
+        "conditions"=>'',
+        "bind"=>[]
+    ];
+    $conditions=array_merge($conditions,$params);
+    return $this->find($conditions);
+    }
+    
+    public function findByIdAndUserId($id,$params=[]){
+        $conditions=[
+            'conditions'=> 'id =?',
+            'bind'=>[$id]
+        ];
+        $conditions=array_merge($conditions,$params);
+        return $this->findFirst($conditions);
+    }
 }

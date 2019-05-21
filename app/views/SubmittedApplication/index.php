@@ -1,62 +1,44 @@
 <?php $this->start('head'); ?>
 <html lang="en">
 <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+
 <?php $this->end(); ?>
 <?php $this->start('body');?>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <h2 class='text-center topic'  style="color: #1A5276; font-family: Georgia, sans-serif " >SUBMITTED  APPLICATIONS</h2>
-<div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100 ver1 m-b-110 ">
-					<div class="table100-head">
-						<table class= "table-hover">
+<div class="container">
+  <table class="responsive-table">
+  
                         
 							<thead>
-								<tr class="row100 head">
-									<th class="cell100 column1">Name </th>
-									<th class="cell100 column2"> Registration Number</th>
-									<th class="cell100 column3">  Email Address</th>
-									<th class="cell100 column4">  Contact</th>
-									<th class="cell100 column5">Field</th>
-									<th class="cell100 column6">Departure</th>
-                                    <th class="cell100 column7">Arrival</th>
-                                    <th class="cell100 column8"> </th>
+								<tr >
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Registration Number</th>
+                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Field</th>
+                                    <th scope="col">Departure</th>
+                                    <th scope="col">Arrival</th>
+                                    <th scope="col"></th>
+									
 								</tr>
 							</thead>
-						</table>
-					</div>
+						
+					
 
-					<div class="table100-body js-pscroll">
-						<table class= "table-hover">
+					
 							<tbody>
                             <?php foreach($this->notupdated as $notupdated): ?>
-                                <tr class="row100 body" style="background-color:#EAF2F8">
-                                    <td >
-                                    <a href="<?=PROOT?>SubmittedApplication/details/<?=$notupdated->id?>" class="cell100 column1"><?=$notupdated->nameInitial?> </td>
-                                    <td class="cell100 column2"><?=$notupdated->regNumber?> </td>
-                                    <td class="cell100 column3"><?=$notupdated->email?> </td>
-                                    <td class="cell100 column4"><?=$notupdated->contact?> </td>
-                                    <td class="cell100 column5"><?=$notupdated->field?> </td>
-                                    <td class="cell100 column6"><?=$notupdated->departure?> </td>
-                                    <td class="cell100 column7"><?=$notupdated->arrival?> </td>
-                                    <td class="cell100 column8">
+                                <tr style="background-color: rgba(54, 93, 82, 0.1)" >
+                                    <th scope="row" >
+                                    <a href="<?=PROOT?>SubmittedApplication/details/<?=$notupdated->id?>" ><?=$notupdated->nameInitial?> </th>
+                                    <td data-title="Registration Number"><?=$notupdated->regNumber?> </td>
+                                    <td data-title="Email Address"><?=$notupdated->email?> </td>
+                                    <td data-title="Contact"><?=$notupdated->contact?> </td>
+                                    <td data-title="Field"><?=$notupdated->field?> </td>
+                                    <td data-title="Departure"><?=$notupdated->departure?> </td>
+                                    <td data-title="Arrival"><?=$notupdated->arrival?> </td>
+                                    <td data-title="">
                                     <a href="<?=PROOT?>SubmittedApplication/edit/<?=$notupdated->id?>" class="btn btn-info btn-xs">
                                             <i class="glyphicon glyphicon-pencil"></i>Edit
                                         </a>
@@ -67,16 +49,16 @@
                                     </tr>
                             <?php endforeach ;?>
                             <?php foreach($this->updated as $updated): ?>
-                                <tr class="row100 body">
-                                    <td >
-                                    <a href="<?=PROOT?>SubmittedApplication/details/<?=$updated->id?>" class="cell100 column1"><?=$updated->nameInitial?> </td>
-                                    <td class="cell100 column2"><?=$updated->regNumber?> </td>
-                                    <td class="cell100 column3"><?=$updated->email?> </td>
-                                    <td class="cell100 column4"><?=$updated->contact?> </td>
-                                    <td class="cell100 column5"><?=$updated->field?> </td>
-                                    <td class="cell100 column6"><?=$updated->departure?> </td>
-                                    <td class="cell100 column7"><?=$updated->arrival?> </td>
-                                    <td class="cell100 column8"></td>
+                                <tr >
+                                    <th scope="row" >
+                                    <a href="<?=PROOT?>SubmittedApplication/details/<?=$updated->id?>" ><?=$updated->nameInitial?> </td>
+                                    <td data-title="Registration Number"><?=$updated->regNumber?> </td>
+                                    <td data-title="Email Address"><?=$updated->email?> </td>
+                                    <td data-title="Contact"><?=$updated->contact?> </td>
+                                    <td data-title="Field"><?=$updated->field?> </td>
+                                    <td data-title="Departure"><?=$updated->departure?> </td>
+                                    <td data-title="Arrival"><?=$updated->arrival?> </td>
+                                    <td data-title=""></td>
                                 </tr>
                             <?php endforeach ;?>
                                 
