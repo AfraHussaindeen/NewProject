@@ -34,6 +34,32 @@
         "Register" : ["logout"],
         "DocumentDetails" : ["*"],
         "Letter" :["*"]
+    },
+
+    "subjectClerkO":{
+        "denied" :{
+            "OverseasTraining" :["*"],
+            "Contact" : ["*"],
+            "Register" :["login" , "register"],
+            "Letter":["checkSubmission"],
+            "DocumentDetails" : ["*"]
+        },
+        "Home" : ["*"], 
+        "Register" : ["logout"],
+        "SubmittedApplication" :["*"]
+    },
+    "admin":{
+        "denied":{
+            "OverseasTraining" :["*"],
+            "Contact" : ["*"],
+            "Register" :["register"],
+            "Letter":["*"],
+            "DocumentDetails" : ["*"],
+            "SubmittedApplication" :["*"]
+        },
+        "Home":["*"],
+        "SubmittedContact" : ["*"],
+        "Register" : ["logout"]
     }
 
 }

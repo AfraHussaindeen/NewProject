@@ -1,16 +1,15 @@
 {
     "Home" : "home",
     "Document Details" : "documentDetails",
-    "Overseas Training" : "overseasTraining/submit",
     "Submission of letters":{
         "Submitted Letters" : "letter",
         "New Submission" : "letter/add"
     },
     "Check Submission State" : "letter/checkSubmission",
     "Notice and Circulars" : "notice",
-    "Contact" : "contact"
-    
-   
+    "Contact" : "contact",
+    "Overseas Training" : "submittedApplication",
+   "Query" : "submittedContact"
    
 
 

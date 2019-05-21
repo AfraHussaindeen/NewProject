@@ -58,7 +58,11 @@
                                     <td data-title="Field"><?=$updated->field?> </td>
                                     <td data-title="Departure"><?=$updated->departure?> </td>
                                     <td data-title="Arrival"><?=$updated->arrival?> </td>
-                                    <td data-title=""></td>
+                                    <td data-title="">
+                                    <a href="<?=PROOT?>SubmittedApplication/delete/<?=$updated->id?>" class="btn btn-danger btn-xs" onclick="if(!confirm('Are you sure you want to delete this record')){return false;}">
+                                            <i class="glyphicon glyphicon-remove"></i>Delete
+                                        </a>
+                                    </td>
                                 </tr>
                             <?php endforeach ;?>
                                 

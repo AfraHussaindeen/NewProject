@@ -16,11 +16,11 @@ class OverseasTraining extends Controller{
               'arrival'=>[
                   'display'=>'Date of arrival',
                   'required'=> true,
+                  'is_date_greater' => 'departure'
               ],
               'departure'=>[
                 'display'=>'Date of departure',
-                'required' => true,
-                'is_date_greater' => 'arrival'
+                'required' => true
             ]
           ]);
           
