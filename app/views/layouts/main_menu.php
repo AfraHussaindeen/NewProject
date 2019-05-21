@@ -13,7 +13,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <ul class="navbar-brand list-inline">
-              <li><img src="css/logo.png" width="60px" height="70px" class="logo"  alt=""></li>
+              <li><img src="<?php echo PROOT ?>/css/logo.png" width="60px" height="70px" class="logo"  alt=""></li>
               <li class="font_type" style="color: white ; font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 25px">TCService</li>
             </ul>
       </div>
