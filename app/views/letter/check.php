@@ -8,12 +8,12 @@
   <table class="responsive-table">
     <thead>
     
-        <th>Date of Stage1</th>
-        <th>Date of Stage2</th>
-        <th>Date of Stage3</th>
-        <th>Date of Stage4</th>
-        <th>Date of Stage5</th>
-        <th></th>
+        <th scope="col">Date of Stage1</th>
+        <th scope="col">Date of Stage2</th>
+        <th scope="col">Date of Stage3</th>
+        <th scope="col">Date of Stage4</th>
+        <th scope="col">Date of Stage5</th>
+        <th scope="col"></th>
         
     </thead>
 
@@ -21,11 +21,11 @@
         <?php foreach($this->subDetails as $subDetail): ?>
             <tr>
             
-            <td><?= $subDetail->dateStage1 ?></td>
-            <td><?= $subDetail->dateStage2 ?></td>
-            <td><?= $subDetail->dateStage3 ?></td>
-            <td><?= $subDetail->dateStage4 ?></td>
-            <td><?= $subDetail->dateStage5 ?></td>
+            <td data-title="Date of Stage1"><?= $subDetail->dateStage1 ?></td>
+            <td data-title="Date of Stage2"><?= $subDetail->dateStage2 ?></td>
+            <td data-title="Date of Stage3"><?= $subDetail->dateStage3 ?></td>
+            <td data-title="Date of Stage4"><?= $subDetail->dateStage4 ?></td>
+            <td data-title="Date of Stage5"><?= $subDetail->dateStage5 ?></td>
             
             </tr>
         <?php endforeach; ?>
