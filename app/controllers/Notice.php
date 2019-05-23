@@ -5,6 +5,11 @@ class Notice extends Controller{
       parent::__construct($controller,$action);
     }
     public function indexAction(){
-      $this->view->render('notice/index');
+      ?>
+      <script>
+      window.open("http://www.health.gov.lk/CMS/cmsmoh1/"); </script>
+      <?php
+      
+      $this->view->render('home/index');
     }
 }
