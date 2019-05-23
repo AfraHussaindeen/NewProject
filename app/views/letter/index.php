@@ -1,8 +1,9 @@
 
 <?php $this->setSiteTitle('Submitted Letters');?>
+<html lang="en">
 
 <?php $this->start('body'); ?>
-
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <h1 class="text-center ">Submitted Letters </h1>
 <div class="container">
   <table class="responsive-table">
@@ -26,12 +27,12 @@
             <td data-title= "Name with Initials"><?= $submission->nameInitial ?></td>
             <td data-title="NIC Number"><?= $submission->nicNumber ?></td>
             <td data-title="Reg Number"><?= $submission->regNumber ?></td>
-            <td data-title=Date of Stage1><?= $submission->dateStage1 ?></td>
-            <td data-title=Date of Stage2><?= $submission->dateStage2 ?></td>
-            <td data-title=Date of Stage3><?= $submission->dateStage3 ?></td>
-            <td data-title=Date of Stage4><?= $submission->dateStage4 ?></td>
-            <td data-title=Date of Stage5><?= $submission->dateStage5 ?></td>
-            <td data-title=>
+            <td data-title="Date of Stage1"><?= $submission->dateStage1 ?></td>
+            <td data-title="Date of Stage2"><?= $submission->dateStage2 ?></td>
+            <td data-title="Date of Stage3"><?= $submission->dateStage3 ?></td>
+            <td data-title="Date of Stage4"><?= $submission->dateStage4 ?></td>
+            <td data-title="Date of Stage5"><?= $submission->dateStage5 ?></td>
+            <td data-title="">
                 <a href="<?=PROOT?>letter/delete/<?=$submission->id?>" class="btn  btn-danger btn-xs" onclick="if(!confirm('Are you sure that you want to delete?')){return false;}">
                     <i class="glyphicon glyphicon-trash"></i>Delete
                 </a>
