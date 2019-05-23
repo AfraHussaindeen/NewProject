@@ -4,7 +4,7 @@
 
 <?php $this->start('body'); ?>
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<h1 class="text-center ">Submitted Letters </h1>
+<h1 class="text-center ">Submitted Letters 123</h1>
 <div class="container">
   <table class="responsive-table">
     <thead>
