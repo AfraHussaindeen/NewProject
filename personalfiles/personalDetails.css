@@ -1,0 +1,64 @@
+
+body {
+    background-image: url("library-management-system-background-image-6.jpg");
+    position: relative;
+    width: 50%;
+    height:50%;
+    background-repeat: no-repeat;
+    background-size: 1500px 400px;
+}
+img{
+    width:50%;
+    left:50%;
+}
+h1 {
+    font-size: 50px;
+    position: relative;
+    left: 550px;
+    text-decoration:none;
+}
+h2 {
+    font-size: 25px;
+    color: darkblue;
+    position: relative;
+    left: 70px;
+    text-decoration: underline;
+}
+li {
+    font-size: 20px;
+}
+
+a {
+    color: purple ;
+    font-size: 29px;
+}
+    
+    a:link {
+        color: darkblue;
+        text-decoration:none;
+    }
+
+    a:visited {
+        color: green;
+        text-decoration: none;
+    }
+    a:hover {
+        color: yellow;
+        text-decoration: none;
+    }
+    a:active {
+        color: red;
+        text-decoration: none;
+    }
+ul {
+    position: relative;
+    left: 110px;
+}
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
