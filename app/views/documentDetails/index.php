@@ -3,19 +3,8 @@
 
 <?php $this->start('body');?>
   <h1 class='text-center red '> Details of the Documents that need to be submit...............</h1>
-<?php $this->end();?>
 
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title> Document Details</title>
-    <link rel="stylesheet" href="personal_details.css" type="text/css">
-   
-</head>
-
-<body>
-    
+  
  <h1 style="color:darkred;">DOCUMENT DETAILS</h1>
     
     <a href="#Promotion to Grade I">Promotion to Grade I</a>
@@ -186,14 +175,6 @@
         <li>Appointment letters</li>
     </ul>
 
-
-
-
-
-
-
-</body>
-</html>
-
+<?php $this->end();?>
 
 
