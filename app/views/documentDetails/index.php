@@ -186,6 +186,18 @@
 
 </div>
 <style>
+ 
+    
+.font_type{
+    font-family:Georgia,sans-serif ;
+      font-size: 17px
+}
+.font_type-list{
+    font-family:Georgia,
+     sans-serif ;
+      font-size:18px
+}
+</style>         
 
 <?php $this->end();?>
 
