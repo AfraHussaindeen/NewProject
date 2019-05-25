@@ -1,45 +1,33 @@
 
 <?php $this->setSiteTitle('Document Details');?>
 
-<?php $this->start('body');?>
-  <h1 class='text-center red '> Details of the Documents that need to be submit...............</h1>
-
+<?php $this->start('body');?
+<div class="container">
   
- <h1 style="color:darkred;">DOCUMENT DETAILS</h1>
-    
-    <a href="#Promotion to Grade I">Promotion to Grade I</a>
-    <br>
-    <a href="#Promotion to Grade II">Promotion to Grade II</a>
-    <br>
-    <a href="#Confirmation in Post">Confirmation in Post</a>
-    <br>
-    <a href="#Salary conversion">Salary conversion</a>
-    <br>
-    <a href="#Salary Increment">Salary Increment</a>
-    <br>
-    <a href="#Car permit Applicatoin">Car permit Applicatoin</a>
-    <br>
-    <a href="#Foreign leave Application form">Foreign leave Application form</a>
-    <br>
-    <a href="#Language allowance">Language allowance</a>
-    <br>
-    <a href="#Maternity Leave">Maternity Leave</a>
-    <br>
-    <a href="#Permanent Release">Permanent Release</a>
-    <br>
-    <a href="#Resignation">Resignation</a>
-    <br>
-    <a href="#Research Allowance">Research Allowance</a>
-    <br>
-    <a href="#Change name">Change name</a>
-    <br>
-    <a href="#Amendment of date of foreign leave">Amendment of date of foreign leave</a>
-    <br>
-    <a href="#Service letter">Service letter</a>
-    <br>
-    <a href="#Service record">Service record</a>
-
-    <br>
+  <div class =" container mx-auto well " > 
+    <h1 style="color:#0c366dfb;text-align:center;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 23px  ;height: 50px">DOCUMENT DETAILS</h1>
+    <h4 style="font-family:Georgia, sans-serif ; font-size: 18px;text-align:center">Details of the Documents that need to be handover when applying for ,</h4>
+    <ul  style="padding-left:30% ;font-family:Georgia, sans-serif ; font-size: 17px" >
+  
+ <li ><a href="#Promotion to Grade I">Promotion to Grade I</a></li>
+        <li ><a href="#Promotion to Grade II">Promotion to Grade II</a></li>
+        <li ><a href="#Confirmation in Post">Confirmation in Post</a></li>
+        <li ><a href="#Salary conversion">Salary conversion</a></li>
+        <li ><a href="#Salary Increment">Salary Increment</a></li>
+        <li ><a href="#Car permit Applicatoin">Car permit Applicatoin</a></li>
+        <li ><a href="#Foreign leave Application form">Foreign leave Application form</a></li>
+        <li ><a href="#Language allowance">Language allowance</a></li>
+        <li ><a href="#Maternity Leave">Maternity Leave</a></li>
+        <li ><a href="#Permanent Release">Permanent Release</a></li>
+        <li ><a href="#Resignation">Resignation</a></li>
+        <li ><a href="#Research Allowance">Research Allowance</a></li>
+        <li ><a href="#Change name">Change name</a></li>
+        <li ><a href="#Amendment of date of foreign leave">Amendment of date of foreign leave</a></li>
+        <li ><a href="#Service letter">Service letter</a></li>
+        <li ><a href="#Service record">Service record</a></li>
+    </ul>
+  </div>
+   
     <a name="Promotion to Grade I"><h2>Promotion to Grade I</h2></a>
     <ul>
         <li>Application form</li>
