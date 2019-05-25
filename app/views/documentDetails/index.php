@@ -1,15 +1,13 @@
 
-<?php $this->setSiteTitle('Document Details');?>
+<?php $this->start('body');?>
 
-<?php $this->start('body');?
 <div class="container">
   
   <div class =" container mx-auto well " > 
     <h1 style="color:#0c366dfb;text-align:center;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 23px  ;height: 50px">DOCUMENT DETAILS</h1>
     <h4 style="font-family:Georgia, sans-serif ; font-size: 18px;text-align:center">Details of the Documents that need to be handover when applying for ,</h4>
     <ul  style="padding-left:30% ;font-family:Georgia, sans-serif ; font-size: 17px" >
-  
- <li ><a href="#Promotion to Grade I">Promotion to Grade I</a></li>
+        <li ><a href="#Promotion to Grade I">Promotion to Grade I</a></li>
         <li ><a href="#Promotion to Grade II">Promotion to Grade II</a></li>
         <li ><a href="#Confirmation in Post">Confirmation in Post</a></li>
         <li ><a href="#Salary conversion">Salary conversion</a></li>
@@ -27,8 +25,8 @@
         <li ><a href="#Service record">Service record</a></li>
     </ul>
   </div>
-   
-     <div class =" container mx-auto well "style=";font-family:Georgia, sans-serif "  >
+ 
+  <div class =" container mx-auto well "style=";font-family:Georgia, sans-serif "  >
         
     <a name="Promotion to Grade I" class="font_type" >Promotion to Grade I</a>
     <ul  style="font_type-list" >
@@ -186,7 +184,6 @@
 
 </div>
 <style>
- 
     
 .font_type{
     font-family:Georgia,sans-serif ;
@@ -197,8 +194,7 @@
      sans-serif ;
       font-size:18px
 }
-</style>         
+</style>
+
 
 <?php $this->end();?>
-
-
