@@ -21,7 +21,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     
-    <div class="collapse navbar-collapse" style="padding-top: 23px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 15px" id="main_menu">
+    <div class="collapse navbar-collapse" style="padding-top: 23px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 18px" id="main_menu">
       <ul class="nav navbar-nav navbar-left">
         <?php foreach($menu as $key=>$val):
           $active = '';?>
