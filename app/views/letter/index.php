@@ -1,6 +1,11 @@
 
 <?php $this->setSiteTitle('Submitted Letters');?>
 
+<?php $this->start('head'); ?>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+<?php $this->end();?>
+
+
 <?php $this->start('body'); ?>
 
 <h1 class="text-center ">Submitted Letters </h1>

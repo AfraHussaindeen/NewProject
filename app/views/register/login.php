@@ -1,6 +1,7 @@
 <?php $this->setSiteTitle('LogIn');?>
 
 <?php $this->start('head'); ?>
+    <link rel="stylesheet"  href="<?PROOT?>css/form.css">
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
@@ -29,5 +30,34 @@
         </div>
     </form>
 </div>
+
+
+<div class="form-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-horizontal">
+                    <span class="heading">please login</span>
+                    <div class="form-group">
+                        <label class="control-label" for="exampleInputName2">your email</label>
+                        <input required="" name="login[username]" type="email" class="form-control" id="exampleInputEmail1">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="exampleInputName2">password</label>
+                        <input required="" name="login[password]" type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">login</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="signup">Sign up</a>
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <?php $this->end(); ?>
