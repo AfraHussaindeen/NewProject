@@ -1,7 +1,7 @@
 <?php $this->setSiteTitle('State of Submitted Letter')?>
 
 <?php $this->start('body');?>
-
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <div class='col-md-6 col-md-offset-3 well'>
 <h1 class="text-center ">State of Submitted letter </h1>
 <div class="container">
