@@ -6,7 +6,7 @@
 <?php $this->start('body'); ?>
 
 
-
+<!-- 
 <div class="col-md-6 col-md-offset-3 well">
     <form class="form" action="<?=PROOT?>register/login" method="post">
         <div class="bg-danger"><?=$this->displayErrors ?></div>
@@ -30,28 +30,33 @@
         <a href="<?=PROOT?>register/register" class="text-primary">Register</a>
         </div>
     </form>
-</div>
+</div> -->
 
 <div class="form-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <form class="form-horizontal">
+                <form class="form-horizontal" action="<?=PROOT?>register/login" method="post">
                     <span class="heading">please login</span>
+
+                    <div class="bg-danger"><?=$this->displayErrors ?></div>
+                    <br>
                     <div class="form-group">
-                        <label class="control-label" for="exampleInputName2">your email</label>
-                        <input required="" name="login[username]" type="email" class="form-control" id="exampleInputEmail1">
+                        <label class="control-label" for="nicNumber">NIC Number</label>
+                         <input type="text" name="nicNumber" id="nicNumber" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="exampleInputName2">password</label>
-                        <input required="" name="login[password]" type="password" class="form-control">
+                        <label class="control-label" for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <br>
+                        <label for="remember_me">Remember Me <input type="checkbox" id ="remember_me" name="remember_me" value="on"></label>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-default">login</button>
+                    <input type="submit" value="login" class="btn btn-large btn-primary">
+        
                     </div>
                     <div class="form-group">
-                        <a href="#" class="signup">Sign up</a>
-                        <a href="#" class="forgot-pass">Forgot password?</a>
+                        <a href="<?=PROOT?>register/register"  class="signup">Sign up</a>
                     </div>
                 </form>
             </div>
