@@ -1,33 +1,47 @@
 <?php $this->setSiteTitle('LogIn');?>
 
 <?php $this->start('head'); ?>
+    
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
+<link rel="stylesheet"  href="<?php echo PROOT ?>/css/form.css">
 
-<div class="col-md-6 col-md-offset-3 well">
-    <form class="form" action="<?=PROOT?>register/login" method="post">
-        <div class="bg-danger"><?=$this->displayErrors ?></div>
-        <h3 class="text-center">Log In</h3>
-        <div class="form-group">  
-            <label for="nicNumber">NIC Number</label>
-            <input type="text" name="nicNumber" id="nicNumber" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="remember_me">Remember Me <input type="checkbox" id ="remember_me" name="remember_me" value="on"></label>
-        </div>
 
-        <div class="form-group">
-            <input type="submit" value="login" class="btn btn-large btn-primary">
-        </div>
+<div class="wrapper">
+			<div class="inner">
+				<div class="image-holder">
+                <img src="<?php echo PROOT ?>/css/login.png"  alt="">
+                </div>
+
+
+				<form action="<?=PROOT?>register/login" method="post">
+                    <h3>Log In</h3>
+                    
+                    <div class="bg-danger"><?=$this->displayErrors ?></div>
+                    <br>
+                    
+                    <div class="form-row">
+                        <input type="text" name="nicNumber" id="nicNumber" class="form-control" placeholder="NIC Number">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="remember_me">Remember Me <input type="checkbox" id ="remember_me" name="remember_me" value="on"></label>
+                    </div>
+
+                    
+            <input type="submit" value="login">
         <div class="text-right">
-        <a href="<?=PROOT?>register/register" class="text-primary">Register</a>
+        <a href="<?=PROOT?>register/register" >Register</a>
         </div>
-    </form>
-</div>
+				</form>
+				
+			</div>
+		</div>
 
 <?php $this->end(); ?>
