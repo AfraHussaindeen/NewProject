@@ -27,7 +27,7 @@
           $active = '';?>
           <?php if (is_array($val)): ?>
             <li class="dropdown"  style="z-index=10000">
-              <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?>i<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$key?><span class="caret"></span></a>
               <ul class="dropdown-menu">
               <?php foreach($val as $k=>$v):
                 $active = ($v==$currentPage)? 'active':''; ?>
