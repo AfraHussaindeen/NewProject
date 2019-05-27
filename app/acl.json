@@ -11,15 +11,15 @@
 
     "LoggedIn" :{
         "denied" : {
-            "Register" :["login" , "register"],
-            "Letter" :["index","add","delete"]
         },
+        "Home" : ["*"],
         "DocumentDetails" : ["*"],
         "Contact" : ["*"],
         "OverseasTraining" :["submit"],
         "Notice" : ["*"],
-        "Letter":["*"],
-        "Register" :["logout"]
+        "Letter":["checkSubmission"],
+        "Register" :["logout"],
+        "Restricted" : ["*"]
         
     },
 
