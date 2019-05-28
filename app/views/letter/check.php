@@ -3,34 +3,40 @@
 <?php $this->start('body');?>
 
 <div class='col-md-6 col-md-offset-3 well'>
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/utiltable.css">
+<link rel="stylesheet" type="text/css" href="css/maincheck.css">
 <h1 class="text-center ">State of Submitted letter </h1>
-<div class="container">
-  <table class="responsive-table">
-    <thead>
-    
-        <th scope="col">Date of Stage1</th>
-        <th scope="col">Date of Stage2</th>
-        <th scope="col">Date of Stage3</th>
-        <th scope="col">Date of Stage4</th>
-        <th scope="col">Date of Stage5</th>
-        <th scope="col"></th>
-        
-    </thead>
+<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table">
 
-    <tbody>
+					<div class="row header">
+                
+                        <div class="cell">Date of Stage1</div>
+                        <div class="cell">Date of Stage2</div>
+                        <div class="cell">Date of Stage3</div>
+                        <div class="cell">Date of Stage4</div>
+                        <div class="cell">Date of Stage5</div>
+                        
+        
+                    </div>
+
         <?php foreach($this->subDetails as $subDetail): ?>
-            <tr>
+        <div class="row">
+			
             
-            <td data-title="Date of Stage1"><?= $subDetail->dateStage1 ?></td>
-            <td data-title="Date of Stage2"><?= $subDetail->dateStage2 ?></td>
-            <td data-title="Date of Stage3"><?= $subDetail->dateStage3 ?></td>
-            <td data-title="Date of Stage4"><?= $subDetail->dateStage4 ?></td>
-            <td data-title="Date of Stage5"><?= $subDetail->dateStage5 ?></td>
+            <div class="cell" data-title="Date of Stage1"><?= $subDetail->dateStage1 ?></div>
+            <div class="cell" data-title="Date of Stage2"><?= $subDetail->dateStage2 ?></div>
+            <div class="cell" data-title="Date of Stage3"><?= $subDetail->dateStage3 ?></div>
+            <div class="cell" data-title="Date of Stage4"><?= $subDetail->dateStage4 ?></div>
+            <div class="cell" data-title="Date of Stage5"><?= $subDetail->dateStage5 ?></div>
             
-            </tr>
+        </div>
         <?php endforeach; ?>
-    </tbody>
-    </table>
+    
+    </div>
     </div>
 </div>
 
