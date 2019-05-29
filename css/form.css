@@ -68,15 +68,15 @@ input{
   -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); }
 
 .image-holder img {
-  border-radius: 15px;
-  transform: translateX(-94px); }
+  border-radius: 0px;
+  transform: translateX(-150px); }
 
 form {
   padding-top: 42px;
   min-width: 63.88%;
-  transform: translateX(-34px); }
+  transform: translateX(-200px); }
 
-h3 {
+.header {
   font-size: 25px;
   text-align: center;
   margin-bottom: 21px;

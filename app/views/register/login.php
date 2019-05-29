@@ -16,7 +16,7 @@
 
 
 				<form action="<?=PROOT?>register/login" method="post">
-                    <h3>Log In</h3>
+                    <h3 class="header">Log In</h3>
                     
                     <div class="bg-danger"><?=$this->displayErrors ?></div>
                     <br>
