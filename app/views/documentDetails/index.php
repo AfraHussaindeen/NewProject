@@ -1,9 +1,20 @@
 
+<?php $this->setSiteTitle("Document Details");?>
+
 <?php $this->start('body');?>
+
+<style>
+    .backImage{
+        background-image: url("css/doc.png");
+        background-size: 350px;
+        background-position-y: 120px;
+        background-repeat: no-repeat
+    }
+</style>
 
 <div class="container">
   
-  <div class =" container mx-auto well " > 
+  <div class =" container mx-auto well backImage " > 
     <h1 style="color:#0c366dfb;text-align:center;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 23px  ;height: 50px">DOCUMENT DETAILS</h1>
     <h4 style="font-family:Georgia, sans-serif ; font-size: 18px;text-align:center">Details of the Documents that need to be handover when applying for ,</h4>
     <ul  style="padding-left:30% ;font-family:Georgia, sans-serif ; font-size: 17px" >

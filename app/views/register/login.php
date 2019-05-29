@@ -3,11 +3,11 @@
 <?php $this->setSiteTitle('LogIn');?>
 
 <?php $this->start('head'); ?>
-    
+<link rel="stylesheet"  href="<?php echo PROOT ?>/css/form.css">
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
-<link rel="stylesheet"  href="<?php echo PROOT ?>/css/form.css">
+
 
 
 <div class="wrapper">
@@ -38,9 +38,9 @@
 
                     
                     <input class="subButton" type="submit" value="login">
-        <div class="text-right">
-        <a class="link" href="<?=PROOT?>register/register" >Register</a>
-        </div>
+                    <div class="text-right">
+                        <a class="link" href="<?=PROOT?>register/register" >Register</a>
+                    </div>
 				</form>
 				
 			</div>

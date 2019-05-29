@@ -5,11 +5,12 @@
         "Submitted Letters" : "letter",
         "New Submission" : "letter/add"
     },
-    "Check Submission State" : "letter/checkSubmission",
-    "Notice and Circulars" : "notice",
-    "Contact" : "contact",
+    "Overseas Training." : "overseasTraining/submit",
+    "Submission State" : "letter/checkSubmission",
     "Overseas Training" : "submittedApplication",
-    "Query" : "submittedContact"
+    "Query" : "submittedContact",
+    "Circulars" : "notice",
+    "Contact" : "contact"
    
 
 

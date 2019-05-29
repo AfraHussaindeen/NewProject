@@ -41,7 +41,7 @@ input{
 .subButton{
   font-family: "ElMessiri-SemiBold.ttf";
   color: rgb(253, 253, 253); 
-  background-color:rgb(180, 155, 11); ;
+  background-color:rgb(153, 175, 196); ;
   font-size: 23px;
   padding: 0px 50px
 
@@ -80,7 +80,7 @@ input{
 form {
   padding-top: 42px;
   min-width: 63.88%;
-  transform: translateX(-200px); }
+  transform: translateX(-160px); }
 
 .header {
   margin: 0; 
