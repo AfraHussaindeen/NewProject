@@ -10,7 +10,7 @@
 
 			<div class="inner">
 				<div class="image-holder">
-                <img src="<?php echo PROOT ?>/css/login.png"  alt="">
+                <img src="<?php echo PROOT ?>/css/edit.png"  alt="">
                 </div>
 
 
@@ -23,22 +23,22 @@
                     
                     <div class="form-group">
                         <label for="nameInitial">Name with initials</label>
-                        <input type='text' id='nameInitial' name='nameInitial' class='form-control' value='<?=$this->SubmittedApplication->nameInitial;?>' >
+                        <input type='text' id='nameInitial' name='nameInitial' class='form-control' readonly="readonly" value='<?=$this->SubmittedApplication->nameInitial;?>' >
                     </div>    
 
                     <div class="form-group">
                         <label for="regNumber">Register Number</label>
-                        <input type='text' id='regNumber' name='regNumber' class='form-control' value='<?=$this->SubmittedApplication->regNumber;?>' >
+                        <input type='text' id='regNumber' name='regNumber' class='form-control' readonly="readonly" value='<?=$this->SubmittedApplication->regNumber;?>' >
                     </div>    
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type='text' id='email' name='email' class='form-control' value='<?=$this->SubmittedApplication->email;?>' >
+                        <input type='text' id='email' name='email' class='form-control' readonly="readonly" value='<?=$this->SubmittedApplication->email;?>' >
                     </div>    
 
                     <div class="form-group">
                         <label for="contact">Contact Number</label>
-                        <input type='text' id='contact' name='contact' class='form-control' value='<?=$this->SubmittedApplication->contact;?>' >
+                        <input type='text' id='contact' name='contact' class='form-control' readonly="readonly" value='<?=$this->SubmittedApplication->contact;?>' >
                     </div>    
 
                     <div class="form-group">
@@ -60,7 +60,7 @@
                         <label for="departure">Date Of Departure</label>
                         <input type='date' id='departure' name='departure' class='form-control' value='<?=$this->SubmittedApplication->departure?>'>
                     </div>
-                    
+                    <br>
                     <input class="subButton" type="submit" value="Submit">
                     
 				</form>
