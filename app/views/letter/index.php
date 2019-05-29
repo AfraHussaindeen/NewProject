@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/mainindex.css">
 
 <h1 class="text-center ">Submitted Letters </h1>
-<div class="container-table100">
+<div class="container well">
     <div class="limiter">
 
         <div class="wrap-table100">
@@ -18,7 +18,7 @@
 
                     <div class="cell">Name with Initials</div>
                     <div class="cell">NIC Number</div>
-                    <div class="cell">Reg Number</div>
+                    <div class="cell">Register Number</div>
                     <div class="cell">Date of Stage1</div>
                     <div class="cell">Date of Stage2</div>
                     <div class="cell">Date of Stage3</div>
@@ -44,7 +44,7 @@
                                 <i class="glyphicon glyphicon-trash"></i>Delete
                             </a>
                             <a href="<?= PROOT ?>letter/nextStage/<?= $submission->id ?>" class="btn  btn-info btn-xs" onclick="if(!confirm('Are you sure that you want to move to the next stage?')){return false;}">
-                                Next
+                                </i>Next
                             </a>
                         </div>
                     </div>
