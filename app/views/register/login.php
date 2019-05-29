@@ -24,7 +24,7 @@
                     <br>
                     
                     <div class="form-row">
-                        <input type="text" name="nicNumber" id="nicNumber" class="form-control" placeholder="NIC Number">
+                        <input  type="text" name="nicNumber" id="nicNumber" class="form-control" placeholder="NIC Number">
                     </div>
 
                     <div class="form-row">
@@ -37,9 +37,9 @@
                     </div>
 
                     
-            <input type="submit" value="login">
+                    <input class="subButton" type="submit" value="login">
         <div class="text-right">
-        <a href="<?=PROOT?>register/register" >Register</a>
+        <a class="link" href="<?=PROOT?>register/register" >Register</a>
         </div>
 				</form>
 				
