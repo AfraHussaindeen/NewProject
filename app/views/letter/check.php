@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/mainsubapp.css">
 
 <h1 class="text-center ">State of Submitted letter </h1>
-<div class="container-table100">
+<div class="container well">
     <div class="limiter">
 
         <div class="wrap-table100">
