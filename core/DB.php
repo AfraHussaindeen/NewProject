@@ -76,7 +76,7 @@
 
     //order
     if(array_key_exists('order',$params)){
-        $order = ' ORDER BY '. $params['order'];
+        $order = ' ORDER BY '. $params['order'].' DESC';
     }
 
     //limit 
