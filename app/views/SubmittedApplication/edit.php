@@ -1,4 +1,4 @@
-<?php $this->setSiteTitle('Edit Application');?>
+<?php $this->setSiteTitle($this->SubmittedApplication->nameInitial);?>
 
 <?php $this->start('head');?>
     <link rel="stylesheet"  href="<?php echo PROOT ?>/css/form.css">

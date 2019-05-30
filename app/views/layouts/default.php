@@ -31,7 +31,7 @@
       <?= Session::displayMsg();?>
       <?= $this->content('body');?>
     </div>
-    <?php include('footer.php') ?>
+   
 
   </body>
 </html>
