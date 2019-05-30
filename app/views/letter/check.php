@@ -10,10 +10,10 @@
     <?php foreach($this->subDetails as $subDetail): ?>
     
 			<div class="inner">
-				<div class="image-holder" style="transform: translateX(100px);">
-                <img  style="width: 250px ; height: 300px" src="<?php echo PROOT ?>/css/detail.png"  alt="">
+				<div class="image-holder" style="transform: translateX(50px);">
+                <img  style="width: 500px ; height: 300px" src="<?php echo PROOT ?>/css/state.png"  alt="">
                  </div>
-            <div class="container" style="padding-top: 50px  ;font-size: 20px ;font-family:'Times New Roman', Times, serif ;transform: translateX(0px);">
+            <div class="container" style="padding-top: 30px  ;font-size: 20px ;font-family:'Times New Roman', Times, serif ;transform: translateX(0px);">
             <p ><strong>Name: </strong><?=$subDetail->nameInitial?></p>
         <p ><strong>Register Number: </strong><?=$subDetail->nicNumber?></p>
         <p><strong>Email: </strong><?=$subDetail->regNumber?></p>
