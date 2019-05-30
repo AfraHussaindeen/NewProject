@@ -10,10 +10,10 @@
     <?php foreach($this->subDetails as $subDetail): ?>
     
 			<div class="inner">
-				<div class="image-holder" style="transform: translateX(100px);">
-                <img  style="width: 250px ; height: 300px" src="<?php echo PROOT ?>/css/detail.png"  alt="">
+				<div class="image-holder" style="transform: translateX(50px);">
+                <img  style="width: 500px ; height: 300px" src="<?php echo PROOT ?>/css/state.png"  alt="">
                  </div>
-            <div class="container" style="padding-top: 50px  ;font-size: 20px ;font-family:'Times New Roman', Times, serif ;transform: translateX(0px);">
+            <div class="container" style="padding-top: 30px  ;font-size: 20px ;font-family:'Times New Roman', Times, serif ;transform: translateX(0px);">
             <p ><strong>Name: </strong><?=$subDetail->nameInitial?></p>
         <p ><strong>Register Number: </strong><?=$subDetail->nicNumber?></p>
         <p><strong>Email: </strong><?=$subDetail->regNumber?></p>
@@ -27,21 +27,6 @@
 			</div>
 		</div>
 <?php endforeach; ?>
-<!-- 
 
-<div class="col-md-8 col-md-offset-2 well">
-    
-    <a href="<?=PROOT?>SubmittedApplication" class="btn btn-xs btn-default">Back</a>
-    <h2 class=" text-center"><?=$this->SubmittedApplication->nameInitial?></h2>
-    <div class="container">
-        <p><strong>Register Number: </strong><?=$this->SubmittedApplication->regNumber?></p>
-        <p><strong>Email: </strong><?=$this->SubmittedApplication->email?></p>
-        <p><strong>Contact Number: </strong><?=$this->SubmittedApplication->contact?></p>
-        <p><strong>Field: </strong><?=$this->SubmittedApplication->field?></p>
-        <p><strong>Departure: </strong><?=$this->SubmittedApplication->departure?></p>
-        <p><strong>Arrival: </strong><?=$this->SubmittedApplication->arrival?></p>
-    </div>
-</div>
-     -->
 
 <?php $this->end();?> 
