@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <h2 class='text-center topic' style="color: #1A5276; font-family: Georgia, sans-serif ">SUBMITTED APPLICATIONS</h2>
 
-<div class="container-table100">
+<div class="container well">
     <div class="limiter">
 
         <div class="wrap-table100">
@@ -29,7 +29,7 @@
                 </div>
 
                 <?php foreach ($this->notupdated as $notupdated) : ?>
-                    <div class="row" style="background-color: rgba(54, 93, 82, 0.1)">
+                    <div class="row" style="background-color: #EAF4FC">
                     <div class="cell" data-title="Name"><a href="<?= PROOT ?>SubmittedApplication/details/<?= $notupdated->id ?>"><?= $notupdated->nameInitial ?></a> </div>
                         <div class="cell" data-title="Registration Number"><?= $notupdated->regNumber ?> </div>
                         <div class="cell" data-title="Email Address"><?= $notupdated->email ?> </div>

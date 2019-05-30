@@ -61,7 +61,7 @@
                         <input type='date' id='departure' name='departure' class='form-control' value='<?=$this->SubmittedApplication->departure?>'>
                     </div>
                     <br>
-                    <input class="subButton" type="submit" value="Submit">
+                    <input class="subButton" type="submit" value="Update">
                     
 				</form>
 				
