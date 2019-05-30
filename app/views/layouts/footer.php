@@ -1,12 +1,6 @@
 
-<link rel="stylesheet" href="<?PROOT?>css/animate.css">
-
-<link rel="stylesheet" href="<?PROOT?>css/owl.carousel.min.css">
-<link rel="stylesheet" href="<?PROOT?>css/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?PROOT?>css/flaticon.css">
-<link rel="stylesheet" href="<?PROOT?>css/style.css">
+
 <link rel="stylesheet" href="<?PROOT?>css/main.css">
 
 <footer class="site-footer">
