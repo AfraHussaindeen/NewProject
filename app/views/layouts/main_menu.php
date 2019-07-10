@@ -5,8 +5,8 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<nav class="navbar navbar-custom   " style="height: 100px   ">
-  <div class="container-fluid ">
+
+<div class="container-fluid ">
      <!-- Start Header Navigation -->
      <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_menu">
@@ -14,15 +14,16 @@
             </button>
             <ul class="navbar-brand list-inline">
               <li><img src="<?php echo PROOT ?>/css/logo.png" width="60px" height="70px" class="logo"  alt=""></li>
-              <li class="font_type" style="color: white ; font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 25px">TCService</li>
+              <li class="font_type" style="color:grey ; font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 25px">TCService</li>
             </ul>
       </div>
         <!-- End Header Navigation -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     
-    <div class="collapse navbar-collapse" style="padding-top: 23px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 18px" id="main_menu">
+    <div class="collapse navbar-custom navbar-collapse" style="padding-top: 35px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 18px" id="main_menu">
       <ul class="nav navbar-nav navbar-left">
+        
         <?php foreach($menu as $key=>$val):
           $active = '';?>
           <?php if (is_array($val)): ?>
@@ -62,9 +63,8 @@
         <?php endif;?>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
+</div><!-- /.container-fluid -->
 
 
 <style>
@@ -91,7 +91,7 @@
 .navbar-custom .navbar-nav > .open >a {
     text-decoration: none;
     background-color: #42659D;
-}
+} 
 
 .navbar-custom .navbar-brand {
     color:#42659D;
@@ -100,6 +100,6 @@
     background-color:white;
 }
 .navbar-custom .icon-bar {
-    background-color:#42659D;
+    background-color:#42659D; 
 }</style>
 

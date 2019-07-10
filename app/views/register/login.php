@@ -44,6 +44,7 @@
 				</form>
 				
 			</div>
-		</div>
+        </div>
+        <br>
 
 <?php $this->end(); ?>

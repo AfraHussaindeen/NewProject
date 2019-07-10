@@ -20,17 +20,19 @@
 
     <title><?= $this->siteTitle();?></title>
     <?= $this->content('head');?>
-    <!-- <link href='css/bootstrap.min.css' rel='stylesheet'> -->
     
 
   </head>
 
   <body>
     <?php include('main_menu.php')?>
+
     <div class="container-fluid " style="min-height:cal(100%-125px);">
       <?= Session::displayMsg();?>
       <?= $this->content('body');?>
     </div>
+    
+    <?php include("footer.php")?>
    
 
   </body>
