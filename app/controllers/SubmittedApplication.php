@@ -16,6 +16,7 @@ class SubmittedApplication extends Controller{
         $this->view->render('SubmittedApplication/index');
         
     }
+    
     public function editAction($id){
         $submittedApplication=$this->TrainingModel->findByIdAndUserId((int)$id);
         if(!$submittedApplication){
@@ -60,7 +61,7 @@ class SubmittedApplication extends Controller{
                         <p>".$msg."</p>
                     </body>
                     </html>";
-                    if (mail('yogyagamage@gmail.com', $subject, $message, $headers)) {
+                    if (mail('abc@gmail.com', $subject, $message, $headers)) {
                         Session::addMsg('success','Successfully Sent.');;
                     }else{
                         Session::addMsg('unsuccess','unSuccessfull.');;

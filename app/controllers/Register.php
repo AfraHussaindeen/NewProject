@@ -116,13 +116,17 @@ class Register extends Controller{
         
     }
 
-    public function useraccAction(){
-        $validation = new Validate();
-        $submitted=false;
-        $posted_values =['fname'=>'', 'nameInitial'=>'', 'nicNumber'=>'' , 'email'=>'' ,'regNumber'=>'','contact'=>'' ];
+    public function useraccAction($id){
+        $user=$this->UsersModel->findById((int)$id);
+        if(!$user){
+            Router::redirect('Home');
+        }
+        
+        $validation=new Validate();
         if($_POST){
-            $posted_values = posted_values($_POST);
+            $user->assign($_POST);
             $validation->check($_POST ,[
+                
                 'fname'=>[
                     'display'=>'First Name',
                     'required'=> true
@@ -134,45 +138,40 @@ class Register extends Controller{
                 'nicNumber'=>[
                     'display'=>'NIC number',
                     'required'=> true,
-                    'unique' => 'users',
                     'min' => 10,
                     'max'=> 25
                 ],
                 'email'=>[
                     'display'=>'Email',
                     'required'=> true,
-                    'unique' =>'users',
                     'max'=> 150,
                     'valid_email' => true
                 ],
                 
                 'regNumber'=>[
                     'display'=>'Register Number',
-                    'required'=> true,
-                    'unique' =>'users'
+                    'required'=> true
                 ],
                 'contact'=>[
                     'display'=>'Contact Number',
                     'required'=> true,
-                    //'unique' =>'users',
                     'is_numeric' => true
                 ]
             ]);
-
             if ($validation->passed()){
-                $this->UsersModel->registerNewUser($_POST);
-                Session::addMsg('success','Successfully Registered.');
-                $submitted=true;
+                $updated=$user->save();
+                if ($updated){
+                    Session::addMsg('success','Successfully updated.');
+                }else{
+                    Session::addMsg('danger','Error occured');
+                }
             }
+            
         }
-        $this->view->post = $posted_values;
-        $this->view->displayErrors = $validation->displayErrors();
-        if($submitted){
-            $this->view->render('home/index');
-        }else{
-            $this->view->render('register/useracc');
-        }
-        
+        $this->view->displayErrors=$validation->displayErrors();
+        $this->view->User=$user;
+        $this->view->postAction= PROOT.'Register'.DS.'useracc'.DS.$user->id;
+        $this->view->render('Register/useracc');
     }
 }
 

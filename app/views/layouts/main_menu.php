@@ -53,7 +53,7 @@
            <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user "></i><?=currentUser()->fname;?> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="<?=PROOT?>register/useracc"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+              <li><a href="<?=PROOT?>register/useracc/<?=currentUser()->id?>"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
               <li><a href="<?=PROOT?>register/logout"><i class="glyphicon glyphicon-log-out"></i> Sign out</a></li>
             </ul>
           </li>

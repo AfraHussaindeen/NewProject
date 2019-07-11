@@ -45,9 +45,10 @@
             "DocumentDetails" : ["*"]
         },
         "Home" : ["*"], 
-        "Register" : ["logout"],
+        "Register" : ["logout","useracc"],
         "SubmittedApplication" :["*"]
     },
+
     "admin":{
         "denied":{
             "OverseasTraining" :["*"],

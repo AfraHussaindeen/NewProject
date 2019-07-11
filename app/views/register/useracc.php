@@ -24,27 +24,27 @@
 
                     <div class="form-group d-inline-block">
                         <label for="fname">First Name</label>
-                        <input type='text' id='fname' name='fname' class='form-control' value='<?=currentUser()->fname;?>' >
+                        <input type='text' id='fname' name='fname' class='form-control' value='<?=$this->User->fname;?>' >
                     </div>    
                     <div class="form-group">
                         <label for="nameInitial">Name with initials</label>
-                        <input type='text' id='nameInitial' name='nameInitial' class='form-control' value='<?=currentUser()->nameInitial;?>' >
+                        <input type='text' id='nameInitial' name='nameInitial' class='form-control' value='<?=$this->User->nameInitial;?>' >
                     </div>    
                     <div class="form-group">
                         <label for="nicNumber">NIC Number</label>
-                        <input type='text' id='nicNumber' name='nicNumber' class='form-control' value='<?=currentUser()->nicNumber;?>' >
+                        <input type='text' id='nicNumber' name='nicNumber' class='form-control' value='<?=$this->User->nicNumber;?>' >
                     </div>  
                     <div class="form-group">
                         <label for="regNumber">Register Number</label>
-                        <input type='text' id='regNumber' name='regNumber' class='form-control' value='<?=currentUser()->regNumber;?>' >
+                        <input type='text' id='regNumber' name='regNumber' class='form-control' value='<?=$this->User->regNumber;?>' >
                     </div>    
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type='text' id='email' name='email' class='form-control' value='<?=currentUser()->email;?>' >
+                        <input type='text' id='email' name='email' class='form-control' value='<?=$this->User->email;?>' >
                     </div>    
                     <div class="form-group">
                         <label for="contact">Contact Number</label>
-                        <input type='text' id='contact' name='contact' class='form-control' value='<?=currentUser()->contact;?>'>
+                        <input type='text' id='contact' name='contact' class='form-control' value='<?=$this->User->contact;?>'>
                     </div>    
                  
                     <br>
