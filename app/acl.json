@@ -18,7 +18,7 @@
         "OverseasTraining" :["submit"],
         "Notice" : ["*"],
         "Letter":["checkSubmission"],
-        "Register" :["logout"],
+        "Register" :["logout","useracc"],
         "Restricted" : ["*"]
         
     },

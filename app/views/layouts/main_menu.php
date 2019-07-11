@@ -7,21 +7,20 @@
 
 
 <div class="container-fluid ">
-     <!-- Start Header Navigation -->
-     <div class="navbar-header">
+    
+     <div class="navbar-header " style="padding-bottom: 40px">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_menu">
                 <i class="fa fa-bars"></i>
             </button>
             <ul class="navbar-brand list-inline">
               <li><img src="<?php echo PROOT ?>/css/logo.png" width="60px" height="70px" class="logo"  alt=""></li>
-              <li class="font_type" style="color:grey ; font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 25px">TCService</li>
+              <li class="font_type" style="color:black ; padding-top:33px; font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 25px">TCService</li>
             </ul>
+            
       </div>
-        <!-- End Header Navigation -->
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
+        
     
-    <div class="collapse navbar-custom navbar-collapse" style="padding-top: 35px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 18px" id="main_menu">
+    <div class="collapse  navbar-collapse" style="padding-top: 35px ;font-family:Georgia, sans-serif ; font-weight:bold ; font-size: 18px" id="main_menu">
       <ul class="nav navbar-nav navbar-left">
         
         <?php foreach($menu as $key=>$val):
@@ -54,7 +53,8 @@
            <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user "></i><?=currentUser()->fname;?> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="<?=PROOT?>register/logout"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+              <li><a href="<?=PROOT?>register/useracc"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+              <li><a href="<?=PROOT?>register/logout"><i class="glyphicon glyphicon-log-out"></i> Sign out</a></li>
             </ul>
           </li>
 
@@ -62,9 +62,9 @@
           <li><a href="<?=PROOT?>register/login"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
         <?php endif;?>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
 
-</div><!-- /.container-fluid -->
+</div>
 
 
 <style>

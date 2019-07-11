@@ -115,6 +115,65 @@ class Register extends Controller{
         }
         
     }
+
+    public function useraccAction(){
+        $validation = new Validate();
+        $submitted=false;
+        $posted_values =['fname'=>'', 'nameInitial'=>'', 'nicNumber'=>'' , 'email'=>'' ,'regNumber'=>'','contact'=>'' ];
+        if($_POST){
+            $posted_values = posted_values($_POST);
+            $validation->check($_POST ,[
+                'fname'=>[
+                    'display'=>'First Name',
+                    'required'=> true
+                ],
+                'nameInitial'=>[
+                    'display'=>'Name with Initials',
+                    'required'=> true
+                ],
+                'nicNumber'=>[
+                    'display'=>'NIC number',
+                    'required'=> true,
+                    'unique' => 'users',
+                    'min' => 10,
+                    'max'=> 25
+                ],
+                'email'=>[
+                    'display'=>'Email',
+                    'required'=> true,
+                    'unique' =>'users',
+                    'max'=> 150,
+                    'valid_email' => true
+                ],
+                
+                'regNumber'=>[
+                    'display'=>'Register Number',
+                    'required'=> true,
+                    'unique' =>'users'
+                ],
+                'contact'=>[
+                    'display'=>'Contact Number',
+                    'required'=> true,
+                    //'unique' =>'users',
+                    'is_numeric' => true
+                ]
+            ]);
+
+            if ($validation->passed()){
+                $this->UsersModel->registerNewUser($_POST);
+                Session::addMsg('success','Successfully Registered.');
+                $submitted=true;
+            }
+        }
+        $this->view->post = $posted_values;
+        $this->view->displayErrors = $validation->displayErrors();
+        if($submitted){
+            $this->view->render('home/index');
+        }else{
+            $this->view->render('register/useracc');
+        }
+        
+    }
 }
 
 
