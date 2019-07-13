@@ -74,6 +74,26 @@ class Validate{
                                     $this->addError(["{$display} must be a valid NIC number." , $item]);
                                 }
                                 break;
+                            
+                            case 'is_NameIni_correct':
+                                if (preg_match('/[^a-zA-Z\s.]/',$value )){
+                                    $this->addError(["{$display} must be a valid" , $item]);
+                                }
+                                break;
+                            case 'is_fName_correct':
+                                if (preg_match('/[^a-zA-Z\s]/',$value )){
+                                    $this->addError(["{$display} must be a valid" , $item]);
+                                }
+                                break;
+                            case 'is_password_valid':
+                                if ((!preg_match('/[\W]/',$value ))||(!preg_match('/[a-zA-Z]/',$value ))||(!preg_match('/[0-9]/',$value ))){
+                                    $this->addError(["{$display} must contain a letter, a number and a non-word character" , $item]);
+                                }
+                                if (preg_match('/[\s]/',$value )){
+                                    $this->addError(["{$display} must not contain whitespaces" , $item]);
+                                }
+                                
+                                break;   
                     }
                 }
             }

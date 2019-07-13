@@ -57,11 +57,13 @@ class Register extends Controller{
             $validation->check($_POST ,[
                 'fname'=>[
                     'display'=>'First Name',
-                    'required'=> true
+                    'required'=> true,
+                    'is_fName_correct'=>true
                 ],
                 'nameInitial'=>[
                     'display'=>'Name with Initials',
-                    'required'=> true
+                    'required'=> true,
+                    'is_NameIni_correct'=>true
                 ],
                 'nicNumber'=>[
                     'display'=>'NIC number',
@@ -81,7 +83,8 @@ class Register extends Controller{
                 'password'=>[
                     'display'=>'Password',
                     'required'=> true,
-                    'min' =>6
+                    'min' =>6,
+                    'is_password_valid'=>true
                 ],
                 'confirm'=>[
                     'display'=>'Confirm Password',
