@@ -69,8 +69,11 @@ class Validate{
                                     $this->addError(["{$display} must be a date greater than Date of {$rule_value}." , $item]);
                                 }
                                 break;
-                            
-                            
+                            case 'is_NIC_correct':
+                                if (!preg_match('/^[0-9]{9}[vx]$/',$value )){
+                                    $this->addError(["{$display} must be a valid NIC number." , $item]);
+                                }
+                                break;
                     }
                 }
             }

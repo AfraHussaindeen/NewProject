@@ -68,7 +68,8 @@ class Register extends Controller{
                     'required'=> true,
                     'unique' => 'users',
                     'min' => 10,
-                    'max'=> 25
+                    'max'=> 25,
+                    'is_NIC_correct'=>true
                 ],
                 'email'=>[
                     'display'=>'Email',
