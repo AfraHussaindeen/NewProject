@@ -5,7 +5,7 @@
 <?php $this->end(); ?>
 
 <?php $this->start('body'); ?>
-
+<section>
 <div class="container">
     <?php foreach($this->subDetails as $subDetail): ?>
     
@@ -27,6 +27,13 @@
 			</div>
 		</div>
 <?php endforeach; ?>
-
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php include 'C:\xampp\htdocs\NewProject\app\views\layouts\footer.php' ?>
 
 <?php $this->end();?> 
