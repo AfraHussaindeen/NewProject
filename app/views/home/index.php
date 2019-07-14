@@ -118,7 +118,7 @@
       </div>
 </footer> -->
 
-
+<?php include 'C:\xampp\htdocs\NewProject\app\views\layouts\footer.php' ?>
 
   <!-- loader -->
   <style>
