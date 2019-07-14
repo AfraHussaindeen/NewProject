@@ -24,12 +24,16 @@ class Letter extends Controller{
           $validation->check($_POST ,[
               'nameInitial'=>[
                 'display'=>'Name with Initials',
-                'required'=> true
+                'required'=> true,
+                'is_NameIni_correct'=>true
               ],
               'nicNumber'=>[
-                  'display'=>'NIC number',
+                 'display'=>'NIC number',
                  'required' => true,
-                 'unique' =>"letters"
+                 'unique' =>"letters",
+                 'min' => 10,
+                 'max'=> 25,
+                  'is_NIC_correct'=>true
               ],
               'regNumber' =>[
                   'display'=>'Reg number',

@@ -16,6 +16,7 @@ class Contact extends Controller{
               'nameInitial'=>[
                   'display'=>'Name with initials',
                   'required'=> true,
+                  'is_NameIni_correct'=>true
               ],
               'regNumber'=>[
                 'display'=>'Register number'
