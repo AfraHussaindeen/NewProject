@@ -3,10 +3,11 @@
 
 <?php $this->start('body'); ?>
 
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" type="text/css" href="css/mainindex.css">
+<section>
+ <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
+<link rel="stylesheet" type="text/css" href="css/mainindex.css">   
 <h1 class="text-center ">Submitted Letters </h1>
 <div class="container well">
     <div class="limiter">
@@ -52,5 +53,6 @@
             </div>
         </div>
     </div>
-
+    </section>
+<?php include 'C:\xampp\htdocs\NewProject\app\views\layouts\footer.php' ?>
     <?php $this->end(); ?>
