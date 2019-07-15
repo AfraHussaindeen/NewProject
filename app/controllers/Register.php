@@ -133,21 +133,26 @@ class Register extends Controller{
                 
                 'fname'=>[
                     'display'=>'First Name',
-                    'required'=> true
+                    'required'=> true,
+                    'is_fName_correct'=>true
                 ],
                 'nameInitial'=>[
                     'display'=>'Name with Initials',
-                    'required'=> true
+                    'required'=> true,
+                    'is_NameIni_correct'=>true
                 ],
                 'nicNumber'=>[
                     'display'=>'NIC number',
                     'required'=> true,
+                    'unique' => 'users',
                     'min' => 10,
-                    'max'=> 25
+                    'max'=> 25,
+                    'is_NIC_correct'=>true
                 ],
                 'email'=>[
                     'display'=>'Email',
                     'required'=> true,
+                    'unique' =>'users',
                     'max'=> 150,
                     'valid_email' => true
                 ],
