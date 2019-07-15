@@ -68,5 +68,6 @@
 			</div>
 		</div>
 
+        <?php include 'C:\xampp\htdocs\NewProject\app\views\layouts\footer.php' ?>
 
 <?php $this->end(); ?>
