@@ -24,7 +24,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-10  " style="height:0px">
-            <h1 class="font_type "  style="text-align:left; color:black" >Teritary Care Service</h1>
+            <h1 class="font_type "  style="text-align:left; color:black" >Tertiary Care Service</h1>
             <h2 class=" font_type "  style="text-align:left; color:black" >Ministry Of Health</h2>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-10 text ftco-animate">
-            <h1 class=" font_type ">Teritary Care Service</h1>
+            <h1 class=" font_type ">Tertiary Care Service</h1>
             <h2 class="  font_type" >Ministry Of Health</h2>
           </div>
         </div>
